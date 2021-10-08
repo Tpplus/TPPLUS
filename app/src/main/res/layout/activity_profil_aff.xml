@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profil.ProfilActivityAff"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image_affi"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/profile" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/profile_image_affi"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                   android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="Nom Prénom"
+                    android:layout_marginLeft="30dp"/>
+
+                <TextView
+                    android:id="@+id/pNomPrenom"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="@color/vert"
+                    android:textSize="18sp"
+                    android:background="@color/white"
+                    android:text="\tNom prénom" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:text=" Pays"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"/>
+
+                <TextView
+                    android:id="@+id/pPays"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="@color/vert"
+                    android:background="@color/white"
+                    android:layout_marginRight="30dp"
+                    android:textSize="22sp"
+                    android:text="\tPays" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:text="Numéro"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"/>
+
+                <TextView
+                    android:id="@+id/pNumero"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@color/white"
+                    android:textColor="@color/vert"
+                    android:textSize="22sp"
+                    android:layout_marginRight="30dp"
+                    android:text="\tNuméro" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:text="Profession"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"/>
+
+                <TextView
+                    android:id="@+id/pProfession"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@color/white"
+                    android:textColor="@color/vert"
+                    android:textSize="22sp"
+                    android:layout_marginRight="30dp"
+                    android:text="\tProfession" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:text="Situation matrimoniale"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"/>
+
+                <TextView
+                    android:id="@+id/pSituationMa"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@color/white"
+                    android:textColor="@color/vert"
+                    android:textSize="22sp"
+                    android:layout_marginRight="30dp"
+                    android:text="\tSituation matrimoniale" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:layout_marginTop="10dp"
+                    android:text="Niveau d'étude"
+                    android:layout_marginLeft="30dp"/>
+
+                <TextView
+                    android:id="@+id/pNiveauEtud"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@color/white"
+                    android:textColor="@color/vert"
+                    android:textSize="22sp"
+                    android:layout_marginRight="30dp"
+                    android:text="\tNiveau d'étude" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:text="Domaine d'étude"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"/>
+
+                <TextView
+                    android:id="@+id/pDomaineEtude"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@color/white"
+                    android:textColor="@color/vert"
+                    android:textSize="22sp"
+                    android:layout_marginRight="30dp"
+                    android:text="\t etude" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:text="Date de naissance"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"/>
+
+                <TextView
+                    android:id="@+id/pDateDeNaiss"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@color/white"
+                    android:textColor="@color/vert"
+                    android:textSize="22sp"
+                    android:layout_marginRight="30dp"
+                    android:text="\t01/09/2000" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:text="Genre"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"/>
+
+                <TextView
+                    android:id="@+id/pSexe"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@color/white"
+                    android:textColor="@color/vert"
+                    android:textSize="22sp"
+                    android:layout_marginRight="30dp"
+                    android:text="\tHomme" />
+
+                <TextView
+                    android:id="@+id/btn_modifie"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textSize="26sp"
+                    android:layout_below="@+id/textView11"
+                    android:textAlignment="center"
+                    android:background="@drawable/design3"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/afterglow_regular"
+                    android:onClick="ModifierLeProfil"
+                    android:layout_marginBottom="30dp"
+                    android:text="Modifier le profil" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

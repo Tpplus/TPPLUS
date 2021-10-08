@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/mon_compte"
+        android:title="Mon compte"/>
+    <item
+        android:id="@+id/confidentialite"
+        android:title="Confidentialité"/>
+    <item
+        android:id="@+id/langue"
+        android:title="Langue"/>
+    <item
+        android:id="@+id/parametre"
+        android:title="Paramètre"/>
+    <item
+        android:id="@+id/suivez_nous"
+        android:title="Suivez nous"/>
+    <item
+        android:id="@+id/partager"
+        android:title="Partager"/>
+    <item
+        android:id="@+id/signaler"
+        android:title="Signaler un problème"/>
+    <item
+        android:id="@+id/mise_a_jour"
+        android:title="Mise à jour"/>
+    <item
+        android:id="@+id/a_propos"
+        android:title="A propos"/>
+    <item
+        android:id="@+id/deconnxion"
+        android:title="Déconnexion"/>
+
+</menu>

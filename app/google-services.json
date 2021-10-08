@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "7382031490",
+    "project_id": "toppowerplus-7cb4d",
+    "storage_bucket": "toppowerplus-7cb4d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:7382031490:android:c50952aaa23424434b689b",
+        "android_client_info": {
+          "package_name": "com.example.tp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "7382031490-hi6neqlcuhhh8de5thck3msukjbuflmj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjdZPNyA5TvrlM8ydvu-BQG3zeMl4L-ic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "7382031490-hi6neqlcuhhh8de5thck3msukjbuflmj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
