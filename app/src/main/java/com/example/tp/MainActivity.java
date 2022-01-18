@@ -5,178 +5,181 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.tp.Fragment.CoursFragment;
+import com.example.tp.Fragment.DecouvFragment;
+import com.example.tp.Fragment.DocFragment;
+import com.example.tp.Fragment.RediFragment;
 import com.example.tp.Profil.ProfilActivity;
 import com.example.tp.Profil.ProfilActivityAff;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private NavigationView navigationView;
-    private DrawerLayout drawerLayout;
-    private RecyclerView postList;
-    private Toolbar mToolBar;
-    private ActionBarDrawerToggle actionBarDrawerToggle;
-    private ImageView refresh_btn;
-    private TextView decouvrir, offre, formation;
+    private Toolbar toolbar;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+    private TextView userName, userEmail;
     private FirebaseAuth mAuth;
+    private DatabaseReference userRef;
+    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        navigationView= findViewById(R.id.navigation_view);
-        View navView= navigationView.inflateHeaderView(R.layout.navigation_header);
-        mToolBar= findViewById(R.id.main_app_toolbar);
+        toolbar= findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        setSupportActionBar(mToolBar);
-        getSupportActionBar().setTitle("TP+");
-
-        drawerLayout = findViewById(R.id.drawer_layout);
-
-        actionBarDrawerToggle = new ActionBarDrawerToggle(MainActivity.this,
-                drawerLayout, R.string.drawer_open, R.string.drawer_close);
-        drawerLayout.addDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                navigationItemSelectide(item);
-                return false;
+        DrawerLayout drawer= findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle= new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.drawer_open, R.string.drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView= findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        bottomNavigationView= findViewById(R.id.bottom_navigation);
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new CoursFragment()).commit();
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(item1 -> {
+            Fragment selected = null;
+            switch (item1.getItemId()) {
+                case R.id.video_course:
+                    selected = new CoursFragment();
+                    break;
+                case R.id.redifusion:
+                    selected = new RediFragment();
+                    break;
+                case R.id.ddocuments:
+                    selected = new DocFragment();
+                    break;
+                case R.id.decouvrir:
+                    selected = new DecouvFragment();
+                    break;
             }
-
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, selected).commit();
+            return true;
         });
 
         mAuth= FirebaseAuth.getInstance();
+        userName= findViewById(R.id.username);
+        userEmail= findViewById(R.id.useremail);
 
-
-
-    }
-
-    private void navigationItemSelectide(MenuItem item) {
-
-        switch (item.getItemId()){
-            case R.id.profil:
-                startActivity(new Intent(MainActivity.this, ProfilActivityAff.class));
-                break;
-            case R.id.programme:
-                Toast.makeText(this, "programme cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.sinscrire:
-                Toast.makeText(this, "s'inscrire cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.paiement:
-                Toast.makeText(this, "paiement cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.id_message:
-                Toast.makeText(this, "message cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.notification:
-                Toast.makeText(this, "notifications cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.historique:
-                Toast.makeText(this, "historique cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.assistance:
-                Toast.makeText(this, "assistance cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.evaluations:
-                Toast.makeText(this, "evaluations cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.salles:
-                Toast.makeText(this, "Salles cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.emploi_temps:
-                Toast.makeText(this, "Emploi du temps cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.invitation:
-                Toast.makeText(this, "invitation cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.documents:
-                Toast.makeText(this, "documents cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.reglement:
-                Toast.makeText(this, "reglements cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.contacter:
-
-                break;
-        }
     }
 
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        if (actionBarDrawerToggle.onOptionsItemSelected(item)){
-            return true;
-        }
-        //Permettre la gestion des item du deuxième menu(trois points à droite)
+    public boolean onNavigationItemSelected(@NonNull MenuItem item){
         switch (item.getItemId()){
+        case R.id.profil:
+            startActivity(new Intent(MainActivity.this, ProfilActivityAff.class));
+            break;
             case R.id.mon_compte:
-                Toast.makeText(this, "mon compte cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.confidentialite:
-                Toast.makeText(this, "confidentialité cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.langue:
-                Toast.makeText(this, "Langue cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.parametre:
-                Toast.makeText(this, "Paramètre cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.suivez_nous:
-                Toast.makeText(this, "suivez nous cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.partager:
-                Toast.makeText(this, "Partager cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.signaler:
-                Toast.makeText(this, "signaler problème cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.mise_a_jour:
-                Toast.makeText(this, "mise à jour cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.a_propos:
-                Toast.makeText(this, "A propos cliqué", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.deconnxion:
-                break;
-        }
+                Toast.makeText(MainActivity.this, "Mon compte", Toast.LENGTH_SHORT).show();
+            break;
+            case R.id.inscrip:
+                Toast.makeText(MainActivity.this, "Inscription", Toast.LENGTH_SHORT).show();
+            break;
+            case R.id.paiem:
+                Toast.makeText(MainActivity.this, "paiement", Toast.LENGTH_SHORT).show();
+            break;
+            case R.id.archive:
+                Toast.makeText(MainActivity.this, "chaines", Toast.LENGTH_SHORT).show();
+            break;
 
-        return super.onOptionsItemSelected(item);
+
     }
+    return true; }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+        getMenuInflater().inflate(R.menu.right_menu, menu);
         return true;
+    }
+
+    //Menu des trois points
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.confident:
+                Toast.makeText(MainActivity.this, "Confidentialité", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.langue:
+                Toast.makeText(MainActivity.this, "Langue", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.parametre:
+                Toast.makeText(MainActivity.this, "Paramètres", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.partage:
+                Toast.makeText(MainActivity.this, "Partage", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.nous_contacter:
+                Toast.makeText(MainActivity.this, "Nous contacter", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.autre:
+                Toast.makeText(MainActivity.this, "Autres", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.deconnexion:
+                mAuth.signOut();
+                Intent intent= new Intent(MainActivity.this, ConnexionActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override
     protected void onStart() {
-
-        FirebaseUser user= mAuth.getCurrentUser();
         super.onStart();
-        if (user== null && !user.isEmailVerified()){
-            Toast.makeText(this, "Veuillez vérifier votre email...", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(MainActivity.this, EmailVerifyActivity.class));
-            finish();
+        FirebaseUser currentUser= mAuth.getCurrentUser();
+
+        if (currentUser== null){
+            Intent intent= new Intent(MainActivity.this, ConnexionActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        }else {
+            String userId= mAuth.getCurrentUser().getUid();
+            userRef= FirebaseDatabase.getInstance().getReference().child("Utilisateurs");
+            userRef.child(userId).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if (!snapshot.hasChild("Ville")){
+                        Intent intent= new Intent(MainActivity.this, ProfilActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(intent);
+                    }
+                }
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
         }
     }
-
 }

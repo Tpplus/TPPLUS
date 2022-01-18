@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/confident"
+        android:title="Confidentialité"
+        />
+    <item
+        android:id="@+id/langue"
+        android:title="Langue"
+        />
+    <item
+        android:id="@+id/parametre"
+        android:title="Paramètres"
+        />
+    <item
+        android:id="@+id/partage"
+        android:title="Partages"
+        />
+    <item
+        android:id="@+id/nous_contacter"
+        android:title="Nous contacter"
+        />
+    <item
+        android:id="@+id/autre"
+        android:title="Autres"
+        />
+    <item
+        android:id="@+id/deconnexion"
+        android:title="Déconnexion"
+        />
+</menu>

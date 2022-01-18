@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/profil"
+            android:title="Profil"
+            android:icon="@drawable/person"/>
+
+        <item
+            android:id="@+id/inscrip"
+            android:title="Inscription"
+            android:icon="@drawable/numero"
+            />
+        <item
+            android:id="@+id/mon_compte"
+            android:title="Mon compte"
+            android:icon="@drawable/filiere"
+            />
+        <item
+            android:id="@+id/paiem"
+            android:title="Paiement"
+            android:icon="@drawable/paiment"
+            />
+
+        <item
+            android:id="@+id/archive"
+            android:title="Archives"
+            android:icon="@drawable/archive"
+            />
+
+
+    </group>
+
+</menu>

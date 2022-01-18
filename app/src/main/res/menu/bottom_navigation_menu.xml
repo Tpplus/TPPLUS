@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/video_course"
+        android:title="Cours"
+        android:icon="@drawable/videocam"/>
+    <item
+        android:id="@+id/redifusion"
+        android:title="Rédiffusion"
+        android:icon="@drawable/rediffusion"/>
+    <item
+        android:id="@+id/ddocuments"
+        android:title="Documents"
+        android:icon="@drawable/book"/>
+    <item
+        android:id="@+id/decouvrir"
+        android:title="Découvrir"
+        android:icon="@drawable/decouv"/>
+</menu>

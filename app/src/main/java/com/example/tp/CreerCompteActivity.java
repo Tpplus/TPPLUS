@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.tp.Profil.ProfilActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -137,20 +138,9 @@ public class CreerCompteActivity extends AppCompatActivity {
                     userRef.child(userId).updateChildren(userMap).addOnCompleteListener(task1 -> {
                     if (task1.isSuccessful()){
                     Toast.makeText(CreerCompteActivity.this, "Opération reussie!!!", Toast.LENGTH_SHORT).show();
-                        FirebaseUser firebaseUser= mAuth.getCurrentUser();
-                        firebaseUser.sendEmailVerification().addOnCompleteListener(task11 -> {
-                            if (task11.isSuccessful()){
-                                Toast.makeText(CreerCompteActivity.this, "Un email de vérification vous a été envoyé...", Toast.LENGTH_SHORT).show();
-                                Toast.makeText(CreerCompteActivity.this, "Veuillez le vérifier...", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(CreerCompteActivity.this, ConnexionActivity.class));
-                                finish();
-                                loadingBar.dismiss();
-                            }else {
-                                String message= task11.getException().getMessage();
-                                Toast.makeText(CreerCompteActivity.this, "Erreur: "+message, Toast.LENGTH_SHORT).show();
-                                loadingBar.dismiss();
-                            }
-                        });
+                        startActivity(new Intent(CreerCompteActivity.this, ProfilActivity.class));
+                        finish();
+                        loadingBar.dismiss();
                     }else {
                             Toast.makeText(CreerCompteActivity.this, "Echec du Création du compte..!", Toast.LENGTH_SHORT).show();
                             loadingBar.dismiss();

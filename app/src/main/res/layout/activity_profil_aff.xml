@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Profil.ProfilActivityAff"
+    android:background="@drawable/themebac"
     >
 
     <ScrollView
@@ -16,223 +17,335 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/back"
+                tools:ignore="MissingConstraints" />
+
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image_affi"
-                android:layout_width="200dp"
-                android:layout_height="150dp"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:src="@drawable/profile" />
+                android:layout_marginTop="30dp"
+                android:src="@drawable/profile"
+                tools:ignore="MissingConstraints" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_below="@+id/profile_image_affi"
-                android:layout_marginTop="20dp"
-                >
+                android:layout_below="@id/profile_image_affi"
+                android:layout_marginTop="10dp"
 
-                <TextView
-                    android:id="@+id/textView20"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                   android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:text="Nom Prénom"
-                    android:layout_marginLeft="30dp"/>
 
-                <TextView
-                    android:id="@+id/pNomPrenom"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:textColor="@color/vert"
-                    android:textSize="18sp"
-                    android:background="@color/white"
-                    android:text="\tNom prénom" />
+                android:orientation="vertical">
 
-                <TextView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="22sp"
-                    android:text=" Pays"
-                    android:textStyle="bold"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginLeft="30dp"/>
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/pPays"
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/person" />
+
+                        <TextView
+                            android:id="@+id/pNomPrenom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="username" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="30dp"
-                    android:textColor="@color/vert"
-                    android:background="@color/white"
-                    android:layout_marginRight="30dp"
-                    android:textSize="22sp"
-                    android:text="\tPays" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="22sp"
-                    android:text="Numéro"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginLeft="30dp"/>
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/pNumero"
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/email" />
+
+                        <TextView
+                            android:id="@+id/pEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="user@gmail.com" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="30dp"
-                    android:background="@color/white"
-                    android:textColor="@color/vert"
-                    android:textSize="22sp"
-                    android:layout_marginRight="30dp"
-                    android:text="\tNuméro" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="22sp"
-                    android:text="Profession"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginLeft="30dp"/>
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/pProfession"
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/phone" />
+
+                        <TextView
+                            android:id="@+id/pNumero"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="numero" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="30dp"
-                    android:background="@color/white"
-                    android:textColor="@color/vert"
-                    android:textSize="22sp"
-                    android:layout_marginRight="30dp"
-                    android:text="\tProfession" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="22sp"
-                    android:text="Situation matrimoniale"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginLeft="30dp"/>
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/pSituationMa"
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/pays" />
+
+                        <TextView
+                            android:id="@+id/pPays"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Pays" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="30dp"
-                    android:background="@color/white"
-                    android:textColor="@color/vert"
-                    android:textSize="22sp"
-                    android:layout_marginRight="30dp"
-                    android:text="\tSituation matrimoniale" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="22sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginTop="10dp"
-                    android:text="Niveau d'étude"
-                    android:layout_marginLeft="30dp"/>
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/pNiveauEtud"
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ville" />
+
+                        <TextView
+                            android:id="@+id/pVille"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="ville" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="30dp"
-                    android:background="@color/white"
-                    android:textColor="@color/vert"
-                    android:textSize="22sp"
-                    android:layout_marginRight="30dp"
-                    android:text="\tNiveau d'étude" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="22sp"
-                    android:text="Domaine d'étude"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginLeft="30dp"/>
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/pDomaineEtude"
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/genre" />
+
+                        <TextView
+                            android:id="@+id/pSexe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="Genre" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="30dp"
-                    android:background="@color/white"
-                    android:textColor="@color/vert"
-                    android:textSize="22sp"
-                    android:layout_marginRight="30dp"
-                    android:text="\t etude" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="22sp"
-                    android:text="Date de naissance"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginLeft="30dp"/>
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/pDateDeNaiss"
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/datenaissance" />
+
+                        <TextView
+                            android:id="@+id/pDateDeNaiss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="date de naissance" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="30dp"
-                    android:background="@color/white"
-                    android:textColor="@color/vert"
-                    android:textSize="22sp"
-                    android:layout_marginRight="30dp"
-                    android:text="\t01/09/2000" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="22sp"
-                    android:text="Genre"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginLeft="30dp"/>
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/pSexe"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="30dp"
-                    android:background="@color/white"
-                    android:textColor="@color/vert"
-                    android:textSize="22sp"
-                    android:layout_marginRight="30dp"
-                    android:text="\tHomme" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/section" />
 
-                <TextView
-                    android:id="@+id/btn_modifie"
+                        <TextView
+                            android:id="@+id/pSection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="section" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:textSize="26sp"
-                    android:layout_below="@+id/textView11"
-                    android:textAlignment="center"
-                    android:background="@drawable/design3"
-                    android:textColor="@color/white"
-                    android:layout_marginLeft="60dp"
-                    android:layout_marginRight="60dp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/afterglow_regular"
-                    android:onClick="ModifierLeProfil"
-                    android:layout_marginBottom="30dp"
-                    android:text="Modifier le profil" />
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="10dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/niveauetude" />
+
+                        <TextView
+                            android:id="@+id/pNiveauEtud"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="niveau d'étude" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="10dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/formation" />
+
+                        <TextView
+                            android:id="@+id/pDomaineEtude"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="domaine d'étude" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                        <Button
+                            android:id="@+id/button2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textAllCaps="false"
+                            android:backgroundTint="@color/gray"
+                            android:text="Modifier le profil"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="10dp"
+                            />
 
             </LinearLayout>
-
 
         </RelativeLayout>
     </ScrollView>
