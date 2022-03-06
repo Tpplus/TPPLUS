@@ -60,99 +60,97 @@ public class CreerCompteActivity extends AppCompatActivity {
         BtnConnexion= findViewById(R.id.ConnButton);
         ccp= findViewById(R.id.idContryCode);
 
-        BtnConnexion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String nom= Nom.getText().toString();
-                String prenom= Prenom.getText().toString();
-                String pays= Pays.getText().toString();
-                String email= Email.getText().toString();
-                String numero= Numero.getText().toString();
-                String password= Password.getText().toString();
-                String confPass= ConfirPass.getText().toString();
+        BtnConnexion.setOnClickListener(v -> {
+            String nom= Nom.getText().toString();
+            String prenom= Prenom.getText().toString();
+            String pays= Pays.getText().toString();
+            String email= Email.getText().toString().trim();
+            String numero= Numero.getText().toString();
+            String password= Password.getText().toString();
+            String confPass= ConfirPass.getText().toString();
 
-                if (TextUtils.isEmpty(nom)){
-                    Nom.setError("Veuillez entrer votre nom");
-                    Prenom.setError("");
-                    Pays.setError("");
-                    Email.setError("");
-                    Numero.setError("");
-                    Password.setError("");
-                    ConfirPass.setError("");
-                }else if (TextUtils.isEmpty(prenom)){
-                    Prenom.setError("Veuillez entrer votre prénom");
-                    Pays.setError("");
-                    Email.setError("");
-                    Numero.setError("");
-                    Password.setError("");
-                    ConfirPass.setError("");
-                } else if (TextUtils.isEmpty(pays)) {
-                    Pays.setError("Veuillez entrer le nom de votre pays");
-                    Email.setError("");
-                    Numero.setError("");
-                    Password.setError("");
-                    ConfirPass.setError("");
-                }else if (TextUtils.isEmpty(email)) {
-                    Email.setError("Veuillez entrer votre email");
-                    Numero.setError("");
-                    Password.setError("");
-                    ConfirPass.setError("");
-                }else if (TextUtils.isEmpty(numero)) {
-                    Numero.setError("Veuillez entrer numéro de téléphone");
-                    Password.setError("");
-                    ConfirPass.setError("");
-                }else if (TextUtils.isEmpty(password)) {
-                    Password.setError("Veuillez entrer numéro de téléphone");
-                    ConfirPass.setError("");
-                }else if (password.length()<6){
-                    Password.setError("Votre mot de passe doit comporter plus de 6 caractères");
-                } else if (TextUtils.isEmpty(confPass)) {
-                    ConfirPass.setError("Veuillez entrer numéro de téléphone");
-                }else if (!confPass.equals(password)){
-                    ConfirPass.setError("Votre mot de passe ne correspond pas");
-                    Password.setError("");
+            if (TextUtils.isEmpty(nom)){
+                Nom.setError("Veuillez entrer votre nom");
+                Prenom.setError("");
+                Pays.setError("");
+                Email.setError("");
+                Numero.setError("");
+                Password.setError("");
+                ConfirPass.setError("");
+            }else if (TextUtils.isEmpty(prenom)){
+                Prenom.setError("Veuillez entrer votre prénom");
+                Pays.setError("");
+                Email.setError("");
+                Numero.setError("");
+                Password.setError("");
+                ConfirPass.setError("");
+            } else if (TextUtils.isEmpty(pays)) {
+                Pays.setError("Veuillez entrer le nom de votre pays");
+                Email.setError("");
+                Numero.setError("");
+                Password.setError("");
+                ConfirPass.setError("");
+            }else if (TextUtils.isEmpty(email)) {
+                Email.setError("Veuillez entrer votre email");
+                Numero.setError("");
+                Password.setError("");
+                ConfirPass.setError("");
+            }else if (TextUtils.isEmpty(numero)) {
+                Numero.setError("Veuillez entrer numéro de téléphone");
+                Password.setError("");
+                ConfirPass.setError("");
+            }else if (TextUtils.isEmpty(password)) {
+                Password.setError("Veuillez entrer numéro de téléphone");
+                ConfirPass.setError("");
+            }else if (password.length()<6){
+                Password.setError("Votre mot de passe doit comporter plus de 6 caractères");
+            } else if (TextUtils.isEmpty(confPass)) {
+                ConfirPass.setError("Veuillez entrer numéro de téléphone");
+            }else if (!confPass.equals(password)){
+                ConfirPass.setError("Votre mot de passe ne correspond pas");
+                Password.setError("");
+            }else {
+                loadingBar.setTitle("Création du compte en cours...");
+                loadingBar.setMessage("Veuillez patientez");
+                loadingBar.setCanceledOnTouchOutside(false);
+                loadingBar.show();
+
+               ccp.registerCarrierNumberEditText(Numero);
+                numero= ccp.getFullNumberWithPlus();
+
+                String finalNumero = numero;
+                String nom_prenom= ""+nom+" "+prenom;
+
+                mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
+                if (task.isSuccessful()){
+                Toast.makeText(CreerCompteActivity.this, "Authentification reussie!!!", Toast.LENGTH_SHORT).show();
+                String userId= mAuth.getCurrentUser().getUid();
+
+                HashMap userMap= new HashMap();
+                userMap.put("Nom Prénom", nom_prenom);
+                userMap.put("Pays", pays);
+                userMap.put("Email", email);
+                userMap.put("Numero", finalNumero);
+                userMap.put("Mot de passe", password);
+
+                userRef.child(userId).updateChildren(userMap).addOnCompleteListener(task1 -> {
+                if (task1.isSuccessful()){
+                Toast.makeText(CreerCompteActivity.this, "Opération reussie!!!", Toast.LENGTH_SHORT).show();
+                    Intent intent= new Intent(CreerCompteActivity.this, ProfilActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                    loadingBar.dismiss();
                 }else {
-                    loadingBar.setTitle("Création du compte en cours...");
-                    loadingBar.setMessage("Veuillez patientez");
-                    loadingBar.setCanceledOnTouchOutside(false);
-                    loadingBar.show();
-
-                   ccp.registerCarrierNumberEditText(Numero);
-                    numero= ccp.getFullNumberWithPlus();
-
-                    String finalNumero = numero;
-                    String nom_prenom= ""+nom+" "+prenom;
-
-                    mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
-                    if (task.isSuccessful()){
-                    Toast.makeText(CreerCompteActivity.this, "Authentification reussie!!!", Toast.LENGTH_SHORT).show();
-                    String userId= mAuth.getCurrentUser().getUid();
-
-                    HashMap userMap= new HashMap();
-                    userMap.put("Nom Prénom", nom_prenom);
-                    userMap.put("Pays", pays);
-                    userMap.put("Email", email);
-                    userMap.put("Numero", finalNumero);
-                    userMap.put("Mot de passe", password);
-
-                    userRef.child(userId).updateChildren(userMap).addOnCompleteListener(task1 -> {
-                    if (task1.isSuccessful()){
-                    Toast.makeText(CreerCompteActivity.this, "Opération reussie!!!", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(CreerCompteActivity.this, ProfilActivity.class));
-                        finish();
+                        Toast.makeText(CreerCompteActivity.this, "Echec du Création du compte..!", Toast.LENGTH_SHORT).show();
                         loadingBar.dismiss();
-                    }else {
-                            Toast.makeText(CreerCompteActivity.this, "Echec du Création du compte..!", Toast.LENGTH_SHORT).show();
-                            loadingBar.dismiss();
-                            }
-                        });
-                    }else {
-                            String Message= task.getException().getMessage();
-                            Toast.makeText(CreerCompteActivity.this, "Erreur: "+Message, Toast.LENGTH_SHORT).show();
-                            loadingBar.dismiss();
-                         }
-                     });
-                }
+                        }
+                    });
+                }else {
+                        String Message= task.getException().getMessage();
+                        Toast.makeText(CreerCompteActivity.this, "Erreur: "+Message, Toast.LENGTH_SHORT).show();
+                        loadingBar.dismiss();
+                     }
+                 });
             }
         });
 

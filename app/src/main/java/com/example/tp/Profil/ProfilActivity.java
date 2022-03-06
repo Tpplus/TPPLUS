@@ -119,7 +119,8 @@ public class ProfilActivity extends AppCompatActivity {
                 userRef.child(userId).updateChildren(userMap).addOnCompleteListener(task -> {
                     if (task.isSuccessful()){
                         Toast.makeText(ProfilActivity.this, "Votre profil a été completé", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(ProfilActivity.this, MainActivity.class));
+                        Intent intent= new Intent(ProfilActivity.this, MainActivity.class);
+                        startActivity(intent);
                         loadingBar.dismiss();
                     }else {
                         String Message= task.getException().getMessage();

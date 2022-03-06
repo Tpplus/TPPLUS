@@ -11,13 +11,13 @@ import androidx.fragment.app.Fragment;
 
 import com.example.tp.R;
 
-public class DecouvFragment extends Fragment {
+public class AffectationFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View v= inflater.inflate(R.layout.decouv_fragment, container, false);
+        View v= inflater.inflate(R.layout.affectation_fragment, container, false);
 
         return v;
     }

@@ -47,7 +47,7 @@ public class ConnexionActivity extends AppCompatActivity {
 
     public void CliqueSurBtnConnexion(View view) {
        // startActivity(new Intent(ConnexionActivity.this, MainActivity.class));
-        String email= Email.getText().toString();
+        String email= Email.getText().toString().trim();
         String password= Password.getText().toString();
 
         if (TextUtils.isEmpty(email)){
@@ -64,8 +64,9 @@ public class ConnexionActivity extends AppCompatActivity {
                 mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
                     if (task.isSuccessful()){
                         Toast.makeText(ConnexionActivity.this, "Connexion reussie...", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(ConnexionActivity.this, MainActivity.class));
-                        finish();
+                        Intent intent= new Intent(this, MainActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(intent);
                         loadingBar.dismiss();
                     }else {
                         String Message= task.getException().getMessage();

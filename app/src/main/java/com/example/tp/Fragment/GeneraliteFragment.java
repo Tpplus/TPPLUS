@@ -11,13 +11,13 @@ import androidx.fragment.app.Fragment;
 
 import com.example.tp.R;
 
-public class DocFragment extends Fragment {
+public class GeneraliteFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View v= inflater.inflate(R.layout.doc_fragment, container, false);
+        View v= inflater.inflate(R.layout.generalite_fragment, container, false);
 
         return v;
     }

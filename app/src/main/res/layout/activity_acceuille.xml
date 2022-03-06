@@ -12,45 +12,32 @@
         android:layout_height="180dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        app:srcCompat="@drawable/groupe" />
+        app:srcCompat="@drawable/become" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView3"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/textView2"
+        android:fontFamily="@font/afterglow_regular"
+        android:text="Be"
+        android:textColor="@color/rouge"
+        android:textSize="35sp"
+        />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView3"
-        android:layout_marginLeft="70dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/afterglow_regular"
-        android:text="Tp"
+        android:text="Come"
         android:textColor="@color/bleu"
-        android:textSize="30sp" />
-
-    <TextView
-        android:id="@+id/plus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView3"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="20dp"
-        android:layout_toEndOf="@+id/textView2"
-        android:text="+"
-        android:textColor="@color/rouge"
-        android:textSize="35dp"
-        tools:ignore="RtlCompat" />
-
-    <TextView
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView3"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="15dp"
-        android:layout_toEndOf="@+id/plus"
-        android:fontFamily="@font/afterglow_regular"
-        android:text="Program"
-        android:textColor="@color/bleu"
-        android:textSize="30sp"
+        android:textSize="35sp"
         tools:ignore="RtlCompat" />
 
     <ProgressBar

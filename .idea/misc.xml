@@ -9,11 +9,14 @@
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/drawable-v24/design4.xml" value="0.2203125" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/drawable/back.xml" value="0.19814814814814816" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/drawable/btn_design.xml" value="0.2203125" />
+        <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/drawable/btn_design2.xml" value="0.1295" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/drawable/edit_text_design.xml" value="0.2203125" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/drawable/videocam.xml" value="0.2203125" />
-        <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/activity_acceuille.xml" value="0.25" />
+        <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/acceuil_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/activity_acceuille.xml" value="0.2" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/activity_accueille.xml" value="0.1" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/activity_connexion.xml" value="0.22" />
+        <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/activity_cours.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/activity_creer_compte.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/activity_email_verify.xml" value="0.22" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
@@ -21,6 +24,7 @@
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/activity_profil.xml" value="0.22" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/activity_profil_aff.xml" value="0.25" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/activity_profil_modifie.xml" value="0.1" />
+        <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/activity_sincrire.xml" value="0.2" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/aide_fragment.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/cours_fragment.xml" value="0.25" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/decouv_fragment.xml" value="0.20416666666666666" />
@@ -33,7 +37,7 @@
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/profil_fragment.xml" value="0.21" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/redif_fragment.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/setting_fragment.xml" value="0.21" />
-        <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/swipe_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/layout/swipe_layout.xml" value="0.25" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/menu/activity_menu_drawer.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/menu/main_menu.xml" value="0.20416666666666666" />

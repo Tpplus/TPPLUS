@@ -6,19 +6,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.tp.Fragment.CoursFragment;
-import com.example.tp.Fragment.DecouvFragment;
-import com.example.tp.Fragment.DocFragment;
-import com.example.tp.Fragment.RediFragment;
+import com.example.tp.Fragment.AcceuilFragment;
+import com.example.tp.Fragment.AffectationFragment;
+import com.example.tp.Fragment.GeneraliteFragment;
 import com.example.tp.Profil.ProfilActivity;
 import com.example.tp.Profil.ProfilActivityAff;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -37,10 +41,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    private TextView userName, userEmail;
+    private TextView userName, userEmail,btnClicAcceuil, btnAcceuil,btnClicGeneralite, btnGeneralite;
     private FirebaseAuth mAuth;
     private DatabaseReference userRef;
     private BottomNavigationView bottomNavigationView;
+    private ImageView btnAffectation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setTitle("BeCome");
 
         DrawerLayout drawer= findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle= new ActionBarDrawerToggle(
@@ -62,33 +68,57 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView= findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        bottomNavigationView= findViewById(R.id.bottom_navigation);
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new CoursFragment()).commit();
+        btnAcceuil= findViewById(R.id.tAcceuil);
+        btnClicAcceuil= findViewById(R.id.ctAcceuil);
+        btnGeneralite= findViewById(R.id.tGene);
+        btnClicGeneralite= findViewById(R.id.ctGene);
+        btnAffectation= findViewById(R.id.id_affectation);
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(item1 -> {
-            Fragment selected = null;
-            switch (item1.getItemId()) {
-                case R.id.video_course:
-                    selected = new CoursFragment();
-                    break;
-                case R.id.redifusion:
-                    selected = new RediFragment();
-                    break;
-                case R.id.ddocuments:
-                    selected = new DocFragment();
-                    break;
-                case R.id.decouvrir:
-                    selected = new DecouvFragment();
-                    break;
-            }
-            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, selected).commit();
-            return true;
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new AcceuilFragment()).commit();
+
+        btnAcceuil.setOnClickListener(view -> {
+            btnClicGeneralite.setVisibility(View.GONE);
+            btnGeneralite.setVisibility(View.VISIBLE);
+
+            btnAcceuil.setVisibility(View.GONE);
+            btnClicAcceuil.setVisibility(View.VISIBLE);
+
+            replaceFragment(new AcceuilFragment());
         });
+
+       btnGeneralite.setOnClickListener(view -> {
+
+           btnClicAcceuil.setVisibility(View.GONE);
+           btnAcceuil.setVisibility(View.VISIBLE);
+
+           btnGeneralite.setVisibility(View.GONE);
+           btnClicGeneralite.setVisibility(View.VISIBLE);
+
+           replaceFragment(new GeneraliteFragment());
+       });
+
+       btnAffectation.setOnClickListener(view -> {
+
+           btnClicAcceuil.setVisibility(View.GONE);
+           btnAcceuil.setVisibility(View.VISIBLE);
+
+           btnClicGeneralite.setVisibility(View.GONE);
+           btnGeneralite.setVisibility(View.VISIBLE);
+
+           replaceFragment(new AffectationFragment());
+       });
 
         mAuth= FirebaseAuth.getInstance();
         userName= findViewById(R.id.username);
         userEmail= findViewById(R.id.useremail);
 
+    }
+
+    private void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager= getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame_layout, fragment);
+        fragmentTransaction.commit();
     }
 
     @Override
