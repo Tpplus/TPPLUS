@@ -1,9 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#D3D1D1"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".InscrireActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inscription au programme"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#002BFF"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Prise d'information importantes du souscripteur"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginTop="5dp"/>
+
+        <EditText
+            android:id="@+id/nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Entree votre nom..."
+            android:inputType="textEmailAddress"
+            android:background="@drawable/design3"
+            android:textColor="@color/purple_200"
+            android:textSize="@dimen/editText"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:padding="13dp"/>
+
+        <EditText
+            android:id="@+id/prenom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Entree votre prenom..."
+            android:inputType="textEmailAddress"
+            android:background="@drawable/design3"
+            android:textColor="@color/purple_200"
+            android:textSize="@dimen/editText"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:padding="13dp"/>
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Entree la date de naissance..."
+            android:inputType="textEmailAddress"
+            android:background="@drawable/design3"
+            android:textColor="@color/purple_200"
+            android:textSize="@dimen/editText"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:padding="13dp"/>
+
+        <EditText
+            android:id="@+id/genre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Genre.."
+            android:inputType="textEmailAddress"
+            android:background="@drawable/design3"
+            android:textColor="@color/purple_200"
+            android:textSize="@dimen/editText"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:padding="13dp"/>
+
+        <EditText
+            android:id="@+id/pays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pays de residence"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/design3"
+            android:textColor="@color/purple_200"
+            android:textSize="@dimen/editText"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:padding="13dp"/>
+
+       <androidx.cardview.widget.CardView
+           android:layout_marginRight="15dp"
+           android:layout_marginLeft="15dp"
+           android:layout_marginTop="20dp"
+           android:layout_width="match_parent"
+           android:layout_height="160dp">
+           <ScrollView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="sans-serif"
+                   android:textSize="20dp"
+                   android:text="@string/condition"/>
+
+               </LinearLayout>
+           </ScrollView>
+
+       </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/abandon"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="Abandon"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/continuer"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="Continuer"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

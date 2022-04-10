@@ -4,4 +4,18 @@
     <string name="drawer_close">Drawer Close</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="condition">1.DÉFINITIONS
+ » Jour ouvrable «  signifie un jour (autre qu’un samedi, un dimanche ou un jour férié) où les banques aux Pays-Bas sont ouvertes aux affaires.
+« Client «  désigne la personne ou l’entreprise qui achète ou acquiert autrement les Données de la Société.
+« Date d’entrée en vigueur «  a le sens défini à l’article 2.2
+« Société «  signifie Sample Solutions B.V. enregistrée aux Pays-Bas, Stationsplein 45, 3013AK, Zuid Holland, Pays-Bas, numéro d’entreprise KvK 64893081
+ » Données «  signifie les données figurant dans la Confirmation de Commande, comprenant des informations de toute nature, qu’il s’agisse de mots, chiffres, graphiques ou autrement, sous toute autre forme et que celles-ci appartiennent à la Société ou à un tiers, fournies au Client par la Société ou rendues accessibles à celui-ci.
+« Date de livraison «  désigne la date à laquelle la Société fournit les Données au Client. « événement de force majeure  » a le sens qui lui est donné à l’article 12.1.
+« Droits de propriété intellectuelle » signifie tous les brevets, droits sur les inventions, les modèles d’utilité, les droits d’auteur et droits connexes, les marques de commerce, les marques de service, les noms commerciaux, les noms commerciaux et les noms de domaine, les droits relatifs à la tenue vestimentaire, les droits de commerce ou les droits de poursuite en contrefaçon, les droits de concurrence déloyale, les droits sur les dessins, les logiciels informatiques et les droits de base de données, les droits de topographie, les droits moraux, les droits sur les informations confidentielles (y compris le savoir-faire et les secrets commerciaux) et tous les autres droits de propriété intellectuelle, qu’ils soient enregistrés ou non, y compris toutes les demandes, renouvellements ou extensions de ces droits, et tous les droits similaires ou équivalents ou formes de protection dans toute partie du monde.
+« Licence » signifie la licence entre la Société et le Client pour l’utilisation des Données incorporant les présentes Conditions.
+« Période d’autorisation «  a le sens qui lui est donné à l’alinéa 3.2(a).
+« Confirmation de commande «  signifie l’acceptation écrite par le Client du devis de la Société tel qu’il figure au verso.
+« Date de Paiement «  a le sens qui lui est donné à l’alinéa 5.2(b).
+« Prix «  désigne les frais payables par le Client pour la fourniture des Données conformément à l’article 5 ;
+.</string>
 </resources>

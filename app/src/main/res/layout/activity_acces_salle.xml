@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="4dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Acces_salle">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/caer1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:elevation="22dp"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            app:cardElevation="22dp">
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="#002BFF"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:id="@+id/propriete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Propriétés" />
+
+                <TextView
+                    android:id="@+id/layout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/propriete"
+                    android:text="Chaîne:"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_toRightOf="@id/layout1"
+                    android:layout_below="@id/propriete"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="0.000.000.000"
+                    android:gravity="end"
+                    android:layout_alignParentRight="true" />
+
+
+                <TextView
+                    android:id="@+id/layout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout1"
+                    android:text="Numéro de salle"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_toRightOf="@id/layout2"
+                    android:layout_below="@id/layout1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="0.000.000.000"
+                    android:gravity="end"
+                    android:layout_alignParentRight="true" />
+
+
+                <TextView
+                    android:id="@+id/layout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout2"
+                    android:text="Administration"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_toRightOf="@id/layout3"
+                    android:layout_below="@id/layout2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="Initiative plus"
+                    android:gravity="end"
+                    android:layout_alignParentRight="true" />
+
+                <TextView
+                    android:id="@+id/layout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout3"
+                    android:text="Code administrateur"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_toRightOf="@id/layout4"
+                    android:layout_below="@id/layout3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="000.000"
+                    android:gravity="end"
+                    android:layout_alignParentRight="true" />
+
+                <TextView
+                    android:id="@+id/layout5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout4"
+                    android:text="Membres"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_toRightOf="@id/layout5"
+                    android:layout_below="@id/layout4"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="#FF0000"
+                    android:layout_width="wrap_content"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="000.000"
+                    android:gravity="end"
+                    android:layout_alignParentRight="true" />
+
+                <TextView
+                    android:id="@+id/layout6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout5"
+                    android:text="Statut"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_toRightOf="@id/layout6"
+                    android:layout_below="@id/layout5"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="#25C108"
+                    android:layout_width="wrap_content"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="Active/Suspendue"
+                    android:gravity="end"
+                    android:layout_alignParentRight="true" />
+
+
+            </RelativeLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/caer2"
+        android:layout_below="@id/caer1"
+        android:layout_marginTop="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="22dp"
+        android:padding="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        app:cardElevation="22dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activités"
+                android:textColor="#002BFF"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#070707"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Programme"
+                android:textStyle="bold"
+                android:textSize="15dp"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#070707"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Événements"
+                android:textStyle="bold"
+                android:textSize="15dp"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#070707"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mon historique"
+                android:textStyle="bold"
+                android:textSize="15dp"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#070707"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Historiques des activités"
+                android:textStyle="bold"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/direct"
+                android:layout_width="290dp"
+                android:layout_marginTop="28dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#F9120A"
+                android:background="@drawable/btn_design2"
+                android:text="Direct"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/biblioteque"
+                android:layout_width="290dp"
+                android:layout_marginTop="28dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#0A22F9"
+                android:background="@drawable/btn_design2"
+                android:text="Bibliothèque"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:layout_width="290dp"
+                android:layout_marginTop="28dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#0A22F9"
+                android:background="@drawable/btn_design2"
+                android:text="Documents"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:layout_width="290dp"
+                android:layout_marginTop="28dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#0A22F9"
+                android:background="@drawable/btn_design2"
+                android:text="Évaluations"
+                android:layout_gravity="center"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>

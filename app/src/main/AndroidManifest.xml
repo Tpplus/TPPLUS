@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tp">
         <activity
+            android:name=".Biblioteque_salle"
+            android:exported="false" />
+        <activity
+            android:name=".Confirmation_activity"
+            android:exported="false" />
+        <activity
+            android:name=".Direct_salle"
+            android:exported="false" />
+        <activity
+            android:name=".Acces_salle"
+            android:exported="false" />
+        <activity
             android:name=".InscrireActivity"
             android:exported="false" />
         <activity
