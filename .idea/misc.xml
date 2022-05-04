@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/TPPLUS/app/src/main/res/layout/activity_acceuille.xml" value="0.2" />
+        <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/TPPLUS/app/src/main/res/layout/activity_confirmation.xml" value="0.2" />
+        <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/TPPLUS/app/src/main/res/layout/activity_creer_compte.xml" value="0.2" />
+        <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/TPPLUS/app/src/main/res/layout/activity_profil.xml" value="0.2" />
+        <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/TPPLUS/app/src/main/res/layout/activity_profil_aff.xml" value="0.2" />
+        <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/TPPLUS/app/src/main/res/layout/pass_oub.xml" value="0.2" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/drawable-v24/design.xml" value="0.2203125" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/drawable-v24/design2.xml" value="0.2203125" />
         <entry key="..\:/Users/Abdoul Aziz/AndroidStudioProjects/Tp/app/src/main/res/drawable-v24/design3.xml" value="0.20092592592592592" />

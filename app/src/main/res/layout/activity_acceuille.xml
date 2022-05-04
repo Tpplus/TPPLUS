@@ -14,38 +14,42 @@
         android:layout_marginTop="100dp"
         app:srcCompat="@drawable/become" />
 
-    <TextView
-
+    <LinearLayout
+        android:id="@+id/ll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView3"
-        android:layout_marginTop="15dp"
-        android:layout_toLeftOf="@+id/textView2"
-        android:fontFamily="@font/afterglow_regular"
-        android:text="Be"
-        android:textColor="@color/rouge"
-        android:textSize="35sp"
-        />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView3"
+        android:orientation="horizontal"
+        android:layout_below="@id/imageView3"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/afterglow_regular"
-        android:text="Come"
-        android:textColor="@color/bleu"
-        android:textSize="35sp"
-        tools:ignore="RtlCompat" />
+        android:layout_marginTop="20dp"
+        >
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView3"
+            android:fontFamily="@font/afterglow_regular"
+            android:text="Be"
+            android:textColor="@color/rouge"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/afterglow_regular"
+            android:text="Come"
+            android:textColor="@color/bleu"
+            android:textSize="35sp"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/ll"
         android:layout_centerHorizontal="true"
         android:backgroundTint="@color/bleu"
 

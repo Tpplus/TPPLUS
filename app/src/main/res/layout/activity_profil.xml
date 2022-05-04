@@ -36,8 +36,8 @@
                     android:id="@+id/lLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
                     android:layout_below="@+id/profile_image"
+                    android:layout_marginTop="10dp"
                     android:orientation="vertical">
 
                     <EditText
@@ -51,7 +51,7 @@
                         android:hint="Ville..."
                         android:inputType="textPersonName"
                         android:padding="@dimen/padding"
-                        android:textColor="@color/purple_200"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/editText" />
 
                     <EditText
@@ -64,8 +64,9 @@
                         android:background="@drawable/design3"
                         android:hint="Sexe..."
                         android:inputType="textPersonName"
+                        android:textAllCaps="true"
                         android:padding="@dimen/padding"
-                        android:textColor="@color/purple_200"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/editText" />
 
 
@@ -80,7 +81,7 @@
                         android:hint="Date de naissance..."
                         android:inputType="date"
                         android:padding="@dimen/padding"
-                        android:textColor="@color/purple_200"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/editText" />
 
                     <EditText
@@ -91,13 +92,13 @@
                         android:layout_marginTop="15dp"
                         android:layout_marginRight="20dp"
                         android:background="@drawable/design3"
-                        android:hint="Section..."
+                        android:hint="Profession..."
                         android:inputType="textPersonName"
                         android:padding="@dimen/padding"
-                        android:textColor="@color/purple_200"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/editText" />
 
-                    <EditText
+                    <Spinner
                         android:id="@+id/niveau"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -107,8 +108,7 @@
                         android:background="@drawable/design3"
                         android:hint="Niveau d'étude"
                         android:inputType="textPersonName"
-                        android:padding="@dimen/padding"
-                        android:textColor="@color/purple_200"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/editText" />
 
                     <EditText
@@ -122,7 +122,7 @@
                         android:hint="Domaine..."
                         android:inputType="textPersonName"
                         android:padding="@dimen/padding"
-                        android:textColor="@color/purple_200"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/editText" />
 
                     <Button
@@ -134,8 +134,8 @@
                         android:layout_marginRight="100dp"
                         android:layout_marginBottom="120dp"
                         android:backgroundTint="@color/gray"
-                        android:text="Terminer"
                         android:onClick="Sauvegarder"
+                        android:text="Terminer"
                         android:textAllCaps="false"
                         android:textColor="@color/white" />
 

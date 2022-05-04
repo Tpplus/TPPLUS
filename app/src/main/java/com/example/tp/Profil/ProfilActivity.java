@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,9 +34,11 @@ import java.util.HashMap;
 
 public class ProfilActivity extends AppCompatActivity {
 
-    private EditText Ville, Sexe, DateNaiss, Section, NiveauDetu, Domaine;
+    private EditText Ville, Sexe, DateNaiss, Section, Domaine;
+    private Spinner NiveauDetu;
     private Button btn_Save;
     private ImageView JoindreDiplom;
+    private String niveau;
 
 
     private DatabaseReference userRef;
@@ -55,10 +58,38 @@ public class ProfilActivity extends AppCompatActivity {
         NiveauDetu= findViewById(R.id.niveau);
         Domaine= findViewById(R.id.domaine);
 
+        String[] niv= {"Niveau d'etude","Aucun", "Niveau primaire", "Niveau secondaire", "Niveau superieur"};
+
         loadingBar= new ProgressDialog(this);
         mAuth= FirebaseAuth.getInstance();
 
         userRef= FirebaseDatabase.getInstance().getReference().child("Utilisateurs");
+
+        NiveauDetu.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                switch (i){
+                    case 1:
+                        niveau="Aucun";
+                        break;
+                    case 2:
+                        niveau="Niveau primaire";
+                        break;
+                    case 3:
+                        niveau= "Niveau secondaire";
+                        break;
+                    case 4:
+                        niveau= "Niveau superieur";
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
     }
 
@@ -68,7 +99,6 @@ public class ProfilActivity extends AppCompatActivity {
         String sexe= Sexe.getText().toString();
         String dateDeNaissance= DateNaiss.getText().toString();
         String section= Section.getText().toString();
-        String niveauEtude= NiveauDetu.getText().toString();
          String domaineEtude= Domaine.getText().toString();
 
         if (TextUtils.isEmpty(ville)){
@@ -76,28 +106,21 @@ public class ProfilActivity extends AppCompatActivity {
             Sexe.setError("");
             DateNaiss.setError("");
             Section.setError("");
-            NiveauDetu.setError("");
             Domaine.setError("");
 
         } else if (TextUtils.isEmpty(sexe)) {
             Sexe.setError("Veuillez entrer votre genre");
             DateNaiss.setError("");
             Section.setError("");
-            NiveauDetu.setError("");
             Domaine.setError("");
         }else if (TextUtils.isEmpty(dateDeNaissance)) {
             DateNaiss.setError("Veuillez entrer votre date de naissance");
             Section.setError("");
-            NiveauDetu.setError("");
             Domaine.setError("");
         }else if (TextUtils.isEmpty(section)) {
             Section.setError("Veuillez entrer votre section");
-            NiveauDetu.setError("");
             Domaine.setError("");
 
-        }else if (TextUtils.isEmpty(niveauEtude)) {
-            NiveauDetu.setError("Veuillez entrer votre niveau d'étude");
-            Domaine.setError("");
         } else if (TextUtils.isEmpty(domaineEtude)) {
                 Domaine.setError("Veuillez entrer votre d'étude");
         }else {
@@ -113,7 +136,7 @@ public class ProfilActivity extends AppCompatActivity {
                 userMap.put("Genre", sexe);
                 userMap.put("Date de naissance", dateDeNaissance);
                 userMap.put("Section", section);
-                userMap.put("Niveau d'étude", niveauEtude);
+                userMap.put("Niveau d'étude", niveau);
                 userMap.put("Domaine d'étude", domaineEtude);
 
                 userRef.child(userId).updateChildren(userMap).addOnCompleteListener(task -> {

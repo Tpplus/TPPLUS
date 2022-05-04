@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.tp.Profil.PassOub;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
@@ -41,8 +42,11 @@ public class ConnexionActivity extends AppCompatActivity {
         passOublie= findViewById(R.id.forgetPass);
         loadingBar= new ProgressDialog(this);
 
-        CrBtn.setOnClickListener(v -> startActivity(new Intent(ConnexionActivity.this, CreerCompteActivity.class)));
-        passOublie.setOnClickListener(v -> Toast.makeText(ConnexionActivity.this, "Mot de passe oublié...", Toast.LENGTH_SHORT).show());
+        CrBtn.setOnClickListener(v -> startActivity(
+                new Intent(ConnexionActivity.this, CreerCompteActivity.class)));
+        passOublie.setOnClickListener(view -> startActivity(
+                new Intent(ConnexionActivity.this, PassOub.class)));
+
     }
 
     public void CliqueSurBtnConnexion(View view) {
