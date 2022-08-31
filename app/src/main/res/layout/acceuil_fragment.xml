@@ -304,13 +304,13 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/btn_design2"
+                android:background="@drawable/btn_design"
                 android:padding="8dp"
+                android:text="Consulter le programme intégral"
                 android:textAlignment="center"
                 android:textColor="@color/bleu"
                 android:textSize="16sp"
-                android:textStyle="italic"
-                android:text="Consulter le programme intégral" />
+                android:textStyle="italic" />
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

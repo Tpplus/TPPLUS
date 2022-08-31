@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OperationActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Opération"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:id="@+id/tvv"
+        />
+    <View
+        android:id="@+id/vw"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/bleu"
+        android:layout_below="@+id/tvv"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/vw"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="12dp"
+                android:padding="10dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/linear1"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="#ffffff">
+
+                    <ImageView
+                        android:id="@+id/img4"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="13dp"
+                        android:src="@drawable/numero" />
+
+                    <TextView
+                        android:id="@+id/tve"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Operations"
+                        android:textSize="18dp"
+                        android:layout_below="@+id/img4"
+                        android:layout_marginTop="5dp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"/>
+
+                    <View
+                        android:id="@+id/vw1"
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/tve"
+                        android:background="@color/bleu" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@+id/vw1"
+                        android:background="@color/blon">
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="12dp"
+                android:padding="10dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="#ffffff">
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="13dp"
+                        android:src="@drawable/librairie" />
+
+                    <TextView
+                        android:id="@+id/tve1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reception  "
+                        android:textSize="18dp"
+                        android:layout_below="@+id/img2"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"/>
+
+                    <View
+                        android:id="@+id/vw2"
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/bleu"
+                        android:layout_toRightOf="@id/tve1"
+                        android:layout_marginLeft="5dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/blon"
+                        android:layout_toRightOf="@+id/vw2">
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="12dp"
+                android:padding="10dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="#ffffff">
+
+                    <ImageView
+                        android:id="@+id/img1"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="13dp"
+                        android:src="@drawable/message" />
+
+                    <TextView
+                        android:id="@+id/tve2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img1"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="5dp"
+                        android:text="messages  "
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <View
+                        android:id="@+id/vw3"
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/bleu"
+                        android:layout_toRightOf="@id/tve2"
+                        android:layout_marginLeft="5dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/blon"
+                        android:layout_toRightOf="@+id/vw3">
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="12dp"
+                android:padding="10dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="#ffffff">
+
+                    <ImageView
+                        android:id="@+id/img3"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="13dp"
+                        android:src="@drawable/paiment" />
+
+                    <TextView
+                        android:id="@+id/tve3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="paiement   "
+                        android:layout_marginLeft="10dp"
+                        android:textSize="18dp"
+                        android:layout_below="@+id/img3"
+                        android:layout_marginTop="5dp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"/>
+
+                    <View
+                        android:id="@+id/vw4"
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/tve3"
+                        android:background="@color/bleu" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/blon"
+                        android:layout_toRightOf="@+id/vw4">
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"
+                android:padding="10dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="#ffffff">
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="13dp"
+                        android:src="@drawable/condition" />
+
+                    <TextView
+                        android:id="@+id/tve4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="donnees   "
+                        android:layout_marginLeft="15dp"
+                        android:textSize="18dp"
+                        android:layout_below="@+id/img"
+                        android:layout_marginTop="5dp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"/>
+
+                    <View
+                        android:id="@+id/vw5"
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/bleu"
+                        android:layout_toRightOf="@id/tve4"
+                        android:layout_marginLeft="5dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/blon"
+                        android:layout_toRightOf="@+id/vw5">
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -13,13 +13,10 @@ public class AcceuilleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acceuille);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent= new Intent(AcceuilleActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
+        new Handler().postDelayed(() -> {
+            Intent intent= new Intent(AcceuilleActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
         }, 5000);
     }
 }

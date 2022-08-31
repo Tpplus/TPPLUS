@@ -109,8 +109,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
        });
 
         mAuth= FirebaseAuth.getInstance();
-        userName= findViewById(R.id.username);
-        userEmail= findViewById(R.id.useremail);
 
     }
 
@@ -127,62 +125,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         case R.id.profil:
             startActivity(new Intent(MainActivity.this, ProfilActivityAff.class));
             break;
-            case R.id.mon_compte:
-                Toast.makeText(MainActivity.this, "Mon compte", Toast.LENGTH_SHORT).show();
-            break;
             case R.id.inscrip:
                 Toast.makeText(MainActivity.this, "Inscription", Toast.LENGTH_SHORT).show();
             break;
             case R.id.paiem:
-                Toast.makeText(MainActivity.this, "paiement", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Historique de paiement", Toast.LENGTH_SHORT).show();
             break;
-            case R.id.archive:
-                Toast.makeText(MainActivity.this, "chaines", Toast.LENGTH_SHORT).show();
+            case R.id.mes_doc:
+                startActivity(new Intent(this, MesDocActivity.class));
             break;
+            case R.id.attes:
+                startActivity(new Intent(this, MesAttesActivity.class));
+            break;
+            case R.id.mes_dip:
+                startActivity(new Intent(this, MesDipActivity.class));
+                break;
+
 
 
     }
     return true; }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.right_menu, menu);
-        return true;
-    }
-
-    //Menu des trois points
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        switch (item.getItemId()){
-            case R.id.confident:
-                Toast.makeText(MainActivity.this, "Confidentialité", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.langue:
-                Toast.makeText(MainActivity.this, "Langue", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.parametre:
-                Toast.makeText(MainActivity.this, "Paramètres", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.partage:
-                Toast.makeText(MainActivity.this, "Partage", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.nous_contacter:
-                Toast.makeText(MainActivity.this, "Nous contacter", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.autre:
-                Toast.makeText(MainActivity.this, "Autres", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.deconnexion:
-                mAuth.signOut();
-                Intent intent= new Intent(MainActivity.this, ConnexionActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
 
     @Override
     protected void onStart() {

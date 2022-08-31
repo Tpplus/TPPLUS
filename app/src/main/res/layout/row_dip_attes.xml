@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/download"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/dw"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Diplome se reussite de"
+        android:layout_toRightOf="@+id/dw"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/id_dip"/>
+
+    <TextView
+        android:id="@+id/id_univ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Universite publique Nobert Zongo de Koudougou"
+        android:layout_below="@+id/dw"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"/>
+
+
+</RelativeLayout>

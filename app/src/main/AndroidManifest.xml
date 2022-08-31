@@ -6,11 +6,23 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/become"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/become"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tp">
+        <activity
+            android:name=".MesDipActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MesAttesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MesDocActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OperationActivity"
+            android:exported="false" />
         <activity
             android:name=".Biblioteque_salle"
             android:exported="false" />
@@ -23,6 +35,9 @@
         <activity
             android:name=".Acces_salle"
             android:exported="false" />
+        <activity
+            android:name=".Profil.PassOub"
+            android:exported="true"/>
         <activity
             android:name=".InscrireActivity"
             android:exported="false" />

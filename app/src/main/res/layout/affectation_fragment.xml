@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="7dp"
-    android:background="#A13030"
+    android:background="@color/blon"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
@@ -19,67 +19,250 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/caer1"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="350dp"
                 android:elevation="22dp"
-                android:padding="5dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
+                android:padding="3dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
                 app:cardElevation="22dp">
 
-
-                <LinearLayout
-                    android:id="@+id/linear1"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/id_sp_rl"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/spinner_design">
+
+                        <Spinner
+                            android:id="@+id/id_spinner"
+                            android:layout_width="200dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+
 
                     <LinearLayout
+                        android:id="@+id/rl0"
                         android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/id_sp_rl"
                         android:orientation="vertical"
-                        android:layout_height="wrap_content"
-                        android:background="#0A22F9">
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/id_spinner"
+                            android:src="@drawable/info"/>
 
                         <TextView
-                            android:id="@+id/affectation"
+                            android:id="@+id/id_tit"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:text="Les affectations"
-                            android:textColor="#ffffff"
-                            android:textSize="22dp"
-                            android:textStyle="bold|italic" />
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Désolé, vous n'avez sélectionné aucune affectation"/>
+
+                        <TextView
+                            android:id="@+id/id_des"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="10dp"
+                            android:textAlignment="center"
+                            android:text="Si vous n'avez aucune sur la liste de vos affectations,
+veuillez vous inscrire à une offre de formation
+si vous le souhaitez"/>
 
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/rl1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/id_sp_rl"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
 
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/recycler_all"
+                        <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="150dp">
+                            android:layout_height="150dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/id_spinner"
+                            android:src="@drawable/img"/>
 
-                        </androidx.recyclerview.widget.RecyclerView>
+                        <TextView
+                            android:id="@+id/id_ti1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Programme parallèle d'initiation des étudiants en entreprenariat"/>
 
+                        <TextView
+                            android:id="@+id/id_msg1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="10dp"
+                            android:text="Une initiative lancée par le X-genius en collaboration avec le ministère de la jeune"/>
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:id="@+id/rl2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/id_sp_rl"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
 
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/id_spinner"
+                            android:src="@drawable/img"/>
 
+                        <TextView
+                            android:id="@+id/id_ti2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Programme parallèle d'initiation des étudiants en entreprenariat"/>
+
+                        <TextView
+                            android:id="@+id/id_msg2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="10dp"
+                            android:text="Une initiative lancée par le X-genius en collaboration avec le ministère de la jeune"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rl3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/id_sp_rl"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/id_spinner"
+                            android:src="@drawable/img"/>
+
+                        <TextView
+                            android:id="@+id/id_ti3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Programme parallèle d'initiation des étudiants en entreprenariat"/>
+
+                        <TextView
+                            android:id="@+id/id_msg3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="10dp"
+                            android:text="Une initiative lancée par le X-genius en collaboration avec le ministère de la jeune"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rl4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/id_sp_rl"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/id_spinner"
+                            android:src="@drawable/img"/>
+
+                        <TextView
+                            android:id="@+id/id_ti4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Programme parallèle d'initiation des étudiants en entreprenariat"/>
+
+                        <TextView
+                            android:id="@+id/id_msg4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="10dp"
+                            android:text="Une initiative lancée par le X-genius en collaboration avec le ministère de la jeune"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cvvv"
                 android:layout_width="match_parent"
                 android:layout_height="450dp"
                 android:elevation="22dp"
                 android:layout_marginTop="22dp"
-                android:padding="5dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
+                android:visibility="gone"
+                android:padding="3dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
                 app:cardElevation="22dp"
                 android:layout_below="@id/caer1">
 
@@ -110,8 +293,10 @@
                         android:id="@+id/code_salle"
                         android:layout_width="match_parent"
                         android:padding="5dp"
-                        android:background="@drawable/btn_design2"
+                        android:background="@drawable/btn_design"
                         android:layout_marginTop="25dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
                         android:inputType="phone"
                         android:hint="Entrez le code de salle"
                         android:layout_height="50dp"/>
@@ -120,20 +305,24 @@
                     <EditText
                         android:id="@+id/matricule"
                         android:layout_width="match_parent"
-                        android:background="@drawable/btn_design2"
+                        android:background="@drawable/btn_design"
                         android:layout_marginTop="20dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
                         android:padding="5dp"
                         android:hint="Entrez le numero de matricule"
                         android:layout_height="50dp"/>
 
 
-                    <Button
+                    <TextView
                         android:id="@+id/acceder"
-                        android:layout_width="190dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
                         android:textStyle="bold|italic"
                         android:textSize="20dp"
                         android:text="Acceder"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
                         android:layout_marginTop="30dp"
                         android:layout_gravity="center"
                         android:background="@drawable/btn_design2"

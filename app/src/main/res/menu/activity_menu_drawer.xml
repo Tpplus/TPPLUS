@@ -13,20 +13,27 @@
             android:icon="@drawable/numero"
             />
         <item
-            android:id="@+id/mon_compte"
-            android:title="Mon compte"
-            android:icon="@drawable/filiere"
-            />
-        <item
             android:id="@+id/paiem"
-            android:title="Paiement"
+            android:title="Historique de paiement"
             android:icon="@drawable/paiment"
             />
 
         <item
-            android:id="@+id/archive"
-            android:title="Archives"
+            android:id="@+id/mes_doc"
+            android:title="Mes documents(03)"
+            android:icon="@drawable/book"
+            />
+
+        <item
+            android:id="@+id/attes"
+            android:title="Mes attestations"
             android:icon="@drawable/archive"
+            />
+
+        <item
+            android:id="@+id/mes_dip"
+            android:title="Mes diplômes"
+            android:icon="@drawable/filiere"
             />
 
 

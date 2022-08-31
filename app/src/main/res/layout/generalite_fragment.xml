@@ -17,254 +17,202 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="9dp"
+                android:padding="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/linear1"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="440dp"
+                    android:orientation="vertical"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:id="@+id/opera"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Operations"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="#0876CD"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"/>
+
+  /*Ce ListView doit etre remplacer par RecyclerView puis que les donnees qu'il contiendra sera
+                    lu dans la base de donnee(firebase). Ce ListView c'est juste pour donner l'appercu.*/
+
+                    <ListView
+                        android:id="@+id/id_list_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/linear2"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:layout_below="@id/linear1"
+                    android:layout_width="match_parent"
+                    android:background="#ffffff"
+                    android:layout_height="200dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Autres"
+                        android:textSize="20dp"
+                        android:textStyle="bold|italic"
+                        android:textColor="#0876CD"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"/>
+
+                    <TextView
+                        android:id="@+id/nous_cont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nous contacter"
+                        android:textSize="15dp"
+                        android:textStyle="bold|italic"
+                        android:textColor="#040505"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"/>
+
+                    <TextView
+                        android:id="@+id/id_conf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Confidentialité"
+                        android:textSize="15dp"
+                        android:textStyle="bold|italic"
+                        android:textColor="#040505"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"/>
+
+                    <TextView
+                        android:id="@+id/id_part"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Partager"
+                        android:textSize="15dp"
+                        android:textStyle="bold|italic"
+                        android:textColor="#040505"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"/>
+
+                    <TextView
+                        android:id="@+id/id_aid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Aides"
+                        android:textSize="15dp"
+                        android:textStyle="bold|italic"
+                        android:textColor="#040505"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"/>
+
+                    <TextView
+                        android:id="@+id/id_mise"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mise à jour"
+                        android:textSize="15dp"
+                        android:textStyle="bold|italic"
+                        android:textColor="#040505"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"/>
 
 
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="20dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:layout_below="@id/linear1"
+                    android:layout_width="match_parent"
+                    android:background="#ffffff"
+                    android:layout_height="wrap_content">
 
 
+                    <TextView
+                        android:id="@+id/id_para"
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Paramêtres"
+                        android:textColor="#040505"
+                        android:textSize="15dp"
+                        android:textStyle="bold|italic" />
 
-    <LinearLayout
-        android:id="@+id/linear1"
+                    <TextView
+                        android:id="@+id/id_plus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Plus..."
+                        android:textSize="15dp"
+                        android:textStyle="bold|italic"
+                        android:textColor="#040505"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="8dp"/>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/btn_dec"
         android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:orientation="vertical"
-        android:background="#ffffff">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Operation"
-            android:textSize="20dp"
-            android:textStyle="bold|italic"
-            android:textColor="#0876CD"
-            android:gravity="center"
-            android:layout_marginTop="5dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Inscription"
-            android:textSize="15dp"
-            android:textStyle="bold|italic"
-            android:layout_marginRight="180dp"
-            android:textColor="#0876CD"
-            android:gravity="center"
-            android:layout_marginTop="9dp"/>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:elevation="20dp"
-            android:layout_marginTop="9dp"
-            android:padding="10dp"
-            app:cardElevation="10dp">
-
-            <EditText
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:background="@color/white"
-                android:layout_marginTop="9dp"/>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:elevation="20dp"
-            android:layout_marginTop="9dp"
-            android:padding="10dp"
-            app:cardElevation="10dp">
-
-            <EditText
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:background="@color/white"
-                android:layout_marginTop="9dp"/>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:elevation="20dp"
-            android:layout_marginTop="9dp"
-            android:padding="10dp"
-            app:cardElevation="10dp">
-
-            <EditText
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:background="@color/white"
-                android:layout_marginTop="9dp"/>
-
-        </androidx.cardview.widget.CardView>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="300dp"
-            android:background="@drawable/arrow"/>
-
-        <View
-            android:layout_width="wrap_content"
-            android:background="#070707"
-            android:layout_height="2dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Affectation"
-            android:textSize="15dp"
-            android:textStyle="bold|italic"
-            android:layout_marginRight="180dp"
-            android:textColor="#0876CD"
-            android:gravity="center"
-            android:layout_marginTop="9dp"/>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:elevation="20dp"
-            android:layout_marginTop="9dp"
-            android:padding="10dp"
-            app:cardElevation="10dp">
-
-            <EditText
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:background="@color/white"
-                android:layout_marginTop="9dp"/>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:elevation="20dp"
-            android:layout_marginTop="9dp"
-            android:padding="10dp"
-            app:cardElevation="10dp">
-
-            <EditText
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:background="@color/white"
-                android:layout_marginTop="9dp"/>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:elevation="20dp"
-            android:layout_marginTop="9dp"
-            android:padding="10dp"
-            app:cardElevation="10dp">
-
-            <EditText
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:background="@color/white"
-                android:layout_marginTop="9dp"/>
-
-        </androidx.cardview.widget.CardView>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="300dp"
-            android:background="@drawable/arrow"/>
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/linear2"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical"
-        android:layout_below="@id/linear1"
-        android:layout_width="match_parent"
-        android:background="#ffffff"
-        android:layout_height="200dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Autre"
-            android:textSize="20dp"
-            android:textStyle="bold|italic"
-            android:textColor="#0876CD"
-            android:gravity="center"
-            android:layout_marginTop="5dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nous contacter l'agence de la plate-forme"
-            android:textSize="15dp"
-            android:textStyle="bold|italic"
-            android:textColor="#040505"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Contacter le service de formation"
-            android:textSize="15dp"
-            android:textStyle="bold|italic"
-            android:textColor="#040505"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Confidentialité"
-            android:textSize="15dp"
-            android:textStyle="bold|italic"
-            android:textColor="#040505"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Partager"
-            android:textSize="15dp"
-            android:textStyle="bold|italic"
-            android:textColor="#040505"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Aides"
-            android:textSize="15dp"
-            android:textStyle="bold|italic"
-            android:textColor="#040505"
-           android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"/>
-
-
-    </LinearLayout>
-
-    <Button
-        android:padding="10dp"
-        android:layout_below="@id/linear2"
+        android:layout_below="@id/cv2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/white"
        android:background="@drawable/btn_design2"
-        android:text="Deconnection"/>
+        android:text="Deconnection"
+        android:gravity="center_horizontal" />
 
         </LinearLayout>
 
