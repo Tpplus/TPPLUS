@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tp">
         <activity
+            android:name=".Autres.AideActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Autres.NousContacterActivity"
+            android:exported="false" />
+        <activity
             android:name=".MesDipActivity"
             android:exported="false" />
         <activity
@@ -37,7 +43,7 @@
             android:exported="false" />
         <activity
             android:name=".Profil.PassOub"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".InscrireActivity"
             android:exported="false" />

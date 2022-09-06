@@ -55,4 +55,24 @@
 
         />
 
+    <TextView
+        android:id="@+id/xx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:text="From"
+        android:layout_toLeftOf="@+id/vvv"
+        android:textColor="@color/bleu"
+        android:layout_marginLeft="100dp"/>
+
+    <ImageView
+        android:id="@+id/vvv"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/xgenius"
+        android:layout_marginLeft="5dp"/>
+
 </RelativeLayout>

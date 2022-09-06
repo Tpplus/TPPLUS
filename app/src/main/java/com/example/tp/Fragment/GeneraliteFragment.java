@@ -17,6 +17,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
+import com.example.tp.Autres.AideActivity;
+import com.example.tp.Autres.NousContacterActivity;
 import com.example.tp.ConnexionActivity;
 import com.example.tp.MainActivity;
 import com.example.tp.OperationActivity;
@@ -29,6 +31,7 @@ public class GeneraliteFragment extends Fragment {
     private AlertDialog.Builder dialog;
     private FirebaseAuth mAuth;
     private ListView lv; // A remplacer par RecyclerView
+    private TextView contacterBtn, partagerBtn, aideBtn;
 
     // Ce tableau est juste utiliser pour montrer l'appercu
     private String[] master ={"Master-classes 01", "Master-classes 02", "Master-classes 03",
@@ -47,6 +50,9 @@ public class GeneraliteFragment extends Fragment {
         BtnDec= v.findViewById(R.id.btn_dec);
         dialog= new AlertDialog.Builder(getContext());
         lv= v.findViewById(R.id.id_list_view);
+        contacterBtn= v.findViewById(R.id.nous_cont);
+        partagerBtn= v.findViewById(R.id.id_part);
+        aideBtn= v.findViewById(R.id.id_aid);
 
         mAuth= FirebaseAuth.getInstance();
 
@@ -98,6 +104,22 @@ public class GeneraliteFragment extends Fragment {
 
            dialog.create().show();
 
+        });
+
+        contacterBtn.setOnClickListener(view -> {
+            startActivity(new Intent(getContext(), NousContacterActivity.class));
+        });
+
+        partagerBtn.setOnClickListener(view -> {
+            Intent intent= new Intent();
+            intent.setAction(Intent.ACTION_SEND);
+            intent.putExtra(Intent.EXTRA_TEXT, "Salut je vous conseille d'utiliser BeCome");
+            intent.setType("text/plain");
+            startActivity(intent);
+        });
+
+        aideBtn.setOnClickListener(view -> {
+            startActivity(new Intent(getContext(), AideActivity.class));
         });
 
         return v;
