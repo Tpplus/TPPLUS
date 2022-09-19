@@ -1,5 +1,7 @@
 package com.example.tp.Profil;
 
+import static android.R.layout.simple_spinner_dropdown_item;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -34,11 +36,11 @@ import java.util.HashMap;
 
 public class ProfilActivity extends AppCompatActivity {
 
-    private EditText Ville, Sexe, DateNaiss, Section, Domaine;
-    private Spinner NiveauDetu;
+    private EditText Ville, DateNaiss, Section, Domaine;
+    private Spinner NiveauDetu, Sexe;
     private Button btn_Save;
     private ImageView JoindreDiplom;
-    private String niveau;
+    private String niveau= "Aucun", sexe= "Masculin";
 
 
     private DatabaseReference userRef;
@@ -59,11 +61,39 @@ public class ProfilActivity extends AppCompatActivity {
         Domaine= findViewById(R.id.domaine);
 
         String[] niv= {"Niveau d'etude","Aucun", "Niveau primaire", "Niveau secondaire", "Niveau superieur"};
+        String[] sex= {"Masculin", "Feminin"};
 
         loadingBar= new ProgressDialog(this);
         mAuth= FirebaseAuth.getInstance();
 
         userRef= FirebaseDatabase.getInstance().getReference().child("Utilisateurs");
+
+        ArrayAdapter<String> arrayAdapter= new ArrayAdapter<String>(getApplicationContext(),
+                simple_spinner_dropdown_item, sex);
+        Sexe.setAdapter(arrayAdapter);
+
+        Sexe.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i){
+                    case 1:
+                        sexe= "Masculin";
+                        break;
+                    case 2:
+                        sexe= "Feminin";
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        ArrayAdapter<String> adapter= new ArrayAdapter<String>(getApplicationContext(),
+                simple_spinner_dropdown_item , niv);
+        NiveauDetu.setAdapter(adapter);
 
         NiveauDetu.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -96,23 +126,16 @@ public class ProfilActivity extends AppCompatActivity {
     public void Sauvegarder(View view) {
 
         String ville= Ville.getText().toString();
-        String sexe= Sexe.getText().toString();
         String dateDeNaissance= DateNaiss.getText().toString();
         String section= Section.getText().toString();
          String domaineEtude= Domaine.getText().toString();
 
         if (TextUtils.isEmpty(ville)){
             Ville.setError("Veuillez entrer votre ville");
-            Sexe.setError("");
             DateNaiss.setError("");
             Section.setError("");
             Domaine.setError("");
 
-        } else if (TextUtils.isEmpty(sexe)) {
-            Sexe.setError("Veuillez entrer votre genre");
-            DateNaiss.setError("");
-            Section.setError("");
-            Domaine.setError("");
         }else if (TextUtils.isEmpty(dateDeNaissance)) {
             DateNaiss.setError("Veuillez entrer votre date de naissance");
             Section.setError("");
@@ -135,14 +158,16 @@ public class ProfilActivity extends AppCompatActivity {
                 userMap.put("Ville", ville);
                 userMap.put("Genre", sexe);
                 userMap.put("Date de naissance", dateDeNaissance);
-                userMap.put("Section", section);
+                userMap.put("Profession", section);
                 userMap.put("Niveau d'étude", niveau);
                 userMap.put("Domaine d'étude", domaineEtude);
 
                 userRef.child(userId).updateChildren(userMap).addOnCompleteListener(task -> {
                     if (task.isSuccessful()){
-                        Toast.makeText(ProfilActivity.this, "Votre profil a été completé", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ProfilActivity.this, "Votre profil a été completé",
+                                Toast.LENGTH_SHORT).show();
                         Intent intent= new Intent(ProfilActivity.this, MainActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(intent);
                         loadingBar.dismiss();
                     }else {

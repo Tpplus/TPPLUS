@@ -22,10 +22,10 @@ public class MesDocActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mes_doc);
 
-        lv= findViewById(R.id.id_lv);
+       // lv= findViewById(R.id.id_lv);
 
         AdapterList adapterList= new AdapterList(this, doc, type);
-        lv.setAdapter(adapterList);
+       // lv.setAdapter(adapterList);
 
     }
 

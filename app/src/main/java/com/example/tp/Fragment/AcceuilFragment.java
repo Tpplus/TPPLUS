@@ -25,8 +25,8 @@ public class AcceuilFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View v= inflater.inflate(R.layout.acceuil_fragment, container, false);
 
-        btn= v.findViewById(R.id.id_btn_sinsc);
-        btn.setOnClickListener(view -> startActivity(new Intent(getContext(), InscrireActivity.class)));
+       // btn= v.findViewById(R.id.id_btn_sinsc);
+       // btn.setOnClickListener(view -> startActivity(new Intent(getContext(), InscrireActivity.class)));
 
         return v;
     }

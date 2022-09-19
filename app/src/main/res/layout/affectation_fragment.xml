@@ -11,10 +11,25 @@
         android:layout_height="match_parent">
 
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/id_sp_rl"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/spinner_design">
+
+                <Spinner
+                    android:id="@+id/id_spinner"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/caer1"
@@ -24,68 +39,51 @@
                 android:padding="3dp"
                 android:paddingLeft="3dp"
                 android:paddingRight="3dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/id_sp_rl"
                 app:cardElevation="22dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <RelativeLayout
-                        android:id="@+id/id_sp_rl"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:background="@drawable/spinner_design">
-
-                        <Spinner
-                            android:id="@+id/id_spinner"
-                            android:layout_width="200dp"
-                            android:layout_alignParentRight="true"
-                            android:layout_height="wrap_content"/>
-
-                    </RelativeLayout>
-
-
                     <LinearLayout
                         android:id="@+id/rl0"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="10dp"
-                        android:layout_below="@id/id_sp_rl"
-                        android:orientation="vertical"
-                        >
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
                             android:layout_marginTop="10dp"
-                            android:layout_below="@+id/id_spinner"
-                            android:src="@drawable/info"/>
+                            android:src="@drawable/info" />
 
                         <TextView
                             android:id="@+id/id_tit"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:textAlignment="center"
                             android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
                             android:layout_marginRight="5dp"
-                            android:text="Désolé, vous n'avez sélectionné aucune affectation"/>
+                            android:text="Désolé, vous n'avez sélectionné aucune affectation"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/id_des"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:textColor="@color/black"
                             android:layout_marginTop="10dp"
-                            android:textAlignment="center"
+                            android:layout_marginRight="5dp"
                             android:text="Si vous n'avez aucune sur la liste de vos affectations,
 veuillez vous inscrire à une offre de formation
-si vous le souhaitez"/>
+si vous le souhaitez"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
 
                     </LinearLayout>
 
@@ -94,7 +92,6 @@ si vous le souhaitez"/>
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="10dp"
-                        android:layout_below="@id/id_sp_rl"
                         android:orientation="vertical"
                         android:visibility="gone"
                         >
@@ -134,7 +131,6 @@ si vous le souhaitez"/>
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="10dp"
-                        android:layout_below="@id/id_sp_rl"
                         android:orientation="vertical"
                         android:visibility="gone"
                         >
@@ -174,7 +170,6 @@ si vous le souhaitez"/>
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="10dp"
-                        android:layout_below="@id/id_sp_rl"
                         android:orientation="vertical"
                         android:visibility="gone"
                         >
@@ -214,7 +209,6 @@ si vous le souhaitez"/>
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="10dp"
-                        android:layout_below="@id/id_sp_rl"
                         android:orientation="vertical"
                         android:visibility="gone"
                         >
@@ -274,11 +268,11 @@ si vous le souhaitez"/>
 
 
                     <ImageView
-                        android:layout_width="126dp"
-                        android:layout_height="130dp"
+                        android:layout_width="150dp"
+                        android:layout_height="145dp"
                         android:layout_marginTop="10dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/become"/>
+                        android:src="@drawable/beco"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -295,6 +289,7 @@ si vous le souhaitez"/>
                         android:padding="5dp"
                         android:background="@drawable/btn_design"
                         android:layout_marginTop="25dp"
+                        android:textAlignment="center"
                         android:layout_marginLeft="15dp"
                         android:layout_marginRight="15dp"
                         android:inputType="phone"
@@ -309,6 +304,7 @@ si vous le souhaitez"/>
                         android:layout_marginTop="20dp"
                         android:layout_marginRight="15dp"
                         android:layout_marginLeft="15dp"
+                        android:textAlignment="center"
                         android:padding="5dp"
                         android:hint="Entrez le numero de matricule"
                         android:layout_height="50dp"/>
@@ -318,7 +314,7 @@ si vous le souhaitez"/>
                         android:id="@+id/acceder"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold|italic"
+                        android:textStyle="bold"
                         android:textSize="20dp"
                         android:text="Acceder"
                         android:padding="10dp"
@@ -332,7 +328,7 @@ si vous le souhaitez"/>
 
             </androidx.cardview.widget.CardView>
 
-        </LinearLayout>
+        </RelativeLayout>
 
 
 

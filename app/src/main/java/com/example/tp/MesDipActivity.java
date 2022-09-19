@@ -16,18 +16,18 @@ import java.util.zip.Inflater;
 public class MesDipActivity extends AppCompatActivity {
 
     private ListView lv;
-    private String[] dip= {"Diplome de reussite au programme de l'informatique",
+    /*private String[] dip= {"Diplome de reussite au programme de l'informatique",
             "Diplome de reussite au programme de l'informatique"};
-    private String[] univ= {"Universite Norbert ZONGO de Koudougou", "Universite Norbert ZONGO de Koudougou"};
+    private String[] univ= {"Universite Norbert ZONGO de Koudougou", "Universite Norbert ZONGO de Koudougou"}; */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mes_dip);
 
-        lv= findViewById(R.id.lv1);
-        MyAdapter adapter= new MyAdapter(this, dip, univ);
-        lv.setAdapter(adapter);
+       // lv= findViewById(R.id.lv1);
+        //MyAdapter adapter= new MyAdapter(this, dip, univ);
+       // lv.setAdapter(adapter);
     }
 
     private class MyAdapter extends ArrayAdapter{

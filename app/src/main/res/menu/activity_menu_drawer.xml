@@ -20,7 +20,7 @@
 
         <item
             android:id="@+id/mes_doc"
-            android:title="Mes documents(03)"
+            android:title="Mes documents"
             android:icon="@drawable/book"
             />
 

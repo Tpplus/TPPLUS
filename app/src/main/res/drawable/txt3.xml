@@ -5,5 +5,5 @@
         android:width="2dp"
         android:color="@color/blon"/>
     <corners
-        android:radius="600dp"/>
+        android:radius="360dp"/>
 </shape>

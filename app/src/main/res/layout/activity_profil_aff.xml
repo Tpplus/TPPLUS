@@ -22,16 +22,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 >
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profile_image_affi"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/profile"
                     app:civ_border_color="@color/gray"
                     app:civ_border_width="3dp"
-                    android:src="@drawable/profile"
-                    android:layout_marginBottom="15dp"
                     tools:ignore="MissingConstraints" />
             </RelativeLayout>
 
@@ -235,6 +236,7 @@
                             android:backgroundTint="@color/bleu"
                             android:text="Modifier le profil"
                             android:layout_marginBottom="20dp"
+                            android:onClick="EditProfil"
                             android:layout_marginTop="10dp"
                             />
 

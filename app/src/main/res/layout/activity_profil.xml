@@ -23,20 +23,20 @@
                     app:srcCompat="@drawable/back"
                     tools:ignore="MissingConstraints" />
 
-                <de.hdodenhof.circleimageview.CircleImageView
+              <!--  <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profile_image"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="55dp"
                     android:src="@drawable/profile"
-                    tools:ignore="MissingConstraints" />
+                    tools:ignore="MissingConstraints" /> -->
 
                 <LinearLayout
                     android:id="@+id/lLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@+id/profile_image"
+                    android:layout_below="@+id/imageView2"
                     android:layout_marginTop="10dp"
                     android:orientation="vertical">
 
@@ -54,21 +54,21 @@
                         android:textColor="@color/black"
                         android:textSize="@dimen/editText" />
 
-                    <EditText
-                        android:id="@+id/sexe"
+                    <RelativeLayout
+                        android:id="@+id/id_sp_rl"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="15dp"
                         android:layout_marginRight="20dp"
-                        android:background="@drawable/design3"
-                        android:hint="Sexe..."
-                        android:inputType="textPersonName"
-                        android:textAllCaps="true"
-                        android:padding="@dimen/padding"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/editText" />
+                        android:background="@drawable/design3">
 
+                        <Spinner
+                            android:id="@+id/sexe"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
 
                     <EditText
                         android:id="@+id/date_naiss"
@@ -98,18 +98,22 @@
                         android:textColor="@color/black"
                         android:textSize="@dimen/editText" />
 
-                    <Spinner
-                        android:id="@+id/niveau"
+                    <RelativeLayout
+                        android:id="@+id/id_sp_rl2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="15dp"
                         android:layout_marginRight="20dp"
-                        android:background="@drawable/design3"
-                        android:hint="Niveau d'étude"
-                        android:inputType="textPersonName"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/editText" />
+                        android:background="@drawable/design3">
+
+                        <Spinner
+                            android:id="@+id/niveau"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </RelativeLayout>
 
                     <EditText
                         android:id="@+id/domaine"
@@ -119,7 +123,7 @@
                         android:layout_marginTop="15dp"
                         android:layout_marginRight="20dp"
                         android:background="@drawable/design3"
-                        android:hint="Domaine..."
+                        android:hint="Domaine d'activité"
                         android:inputType="textPersonName"
                         android:padding="@dimen/padding"
                         android:textColor="@color/black"

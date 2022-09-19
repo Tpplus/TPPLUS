@@ -59,11 +59,42 @@
         android:layout_toLeftOf="@id/txt2"
         android:gravity="center_horizontal" />
 
-    <ListView
+    <LinearLayout
+        android:id="@+id/rl0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/info" />
+
+        <TextView
+            android:id="@+id/id_tit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:text="Désolé, vous n'avez aucun document pour le moment"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/gotic"/>
+
+
+
+    </LinearLayout>
+
+   <!-- <ListView
         android:id="@+id/id_lv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/txt2"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp" /> -->
 
 </RelativeLayout>

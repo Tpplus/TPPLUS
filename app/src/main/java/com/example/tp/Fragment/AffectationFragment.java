@@ -74,8 +74,7 @@ public class AffectationFragment extends Fragment {
         cv= v.findViewById(R.id.cvvv);
         spinner= v.findViewById(R.id.id_spinner);
 
-        String[] affectations={"Aucune affectation", "Affectation x72gv6af", "Aff-xhhfdbT56gv",
-                "Aff-xhhfdbT56gv", "Aff-xhhfdbT56gv"};
+        String[] affectations={"Aucune affectation"};
 
         ArrayAdapter<String> adapter= new ArrayAdapter<String>(getContext(),
                 simple_spinner_dropdown_item , affectations);
@@ -94,7 +93,7 @@ public class AffectationFragment extends Fragment {
                         rla3.setVisibility(View.GONE);
                         rla4.setVisibility(View.GONE);
                         break;
-                    case 1:
+                   /* case 1:
                         rla.setVisibility(View.GONE);
                         rla1.setVisibility(View.VISIBLE);
                         rla2.setVisibility(View.GONE);
@@ -125,7 +124,7 @@ public class AffectationFragment extends Fragment {
                         rla3.setVisibility(View.GONE);
                         rla4.setVisibility(View.VISIBLE);
                         cv.setVisibility(View.VISIBLE);
-                        break;
+                        break;  */
                 }
 
             }
@@ -153,8 +152,6 @@ public class AffectationFragment extends Fragment {
 
             Intent i = new Intent(getActivity(), Acces_salle.class);
             startActivity(i);
-
-
 
         });
 

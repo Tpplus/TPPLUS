@@ -24,9 +24,9 @@ public class MesAttesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mes_attes);
 
-        lv= findViewById(R.id.lv2);
+        //lv= findViewById(R.id.lv2);
         MyAdapter adapter= new MyAdapter(this, att, un);
-        lv.setAdapter(adapter);
+       // lv.setAdapter(adapter);
     }
 
     private class MyAdapter extends ArrayAdapter {

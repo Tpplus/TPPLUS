@@ -34,12 +34,12 @@ public class GeneraliteFragment extends Fragment {
     private TextView contacterBtn, partagerBtn, aideBtn;
 
     // Ce tableau est juste utiliser pour montrer l'appercu
-    private String[] master ={"Master-classes 01", "Master-classes 02", "Master-classes 03",
+   /* private String[] master ={"Master-classes 01", "Master-classes 02", "Master-classes 03",
             "Master-classes 04","Master-classes 05", "Master-classes 06", "Master-classes 07",
             "Master-classes 08"};
     private String[] paiement={"(Paiement disponible)", "(Paiement disponible)", "(Paiement disponible)",
             "(Paiement disponible)","(Paiement disponible)", "(Paiement disponible)", "(Paiement disponible)",
-            "(Paiement disponible)"};
+            "(Paiement disponible)"}; */
 
     @Nullable
     @Override
@@ -49,14 +49,14 @@ public class GeneraliteFragment extends Fragment {
 
         BtnDec= v.findViewById(R.id.btn_dec);
         dialog= new AlertDialog.Builder(getContext());
-        lv= v.findViewById(R.id.id_list_view);
+        //lv= v.findViewById(R.id.id_list_view);
         contacterBtn= v.findViewById(R.id.nous_cont);
         partagerBtn= v.findViewById(R.id.id_part);
         aideBtn= v.findViewById(R.id.id_aid);
 
         mAuth= FirebaseAuth.getInstance();
 
-        MyAdapter adapter= new MyAdapter(getContext(), master, paiement);
+       /* MyAdapter adapter= new MyAdapter(getContext(), master, paiement);
         lv.setAdapter(adapter);
 
         lv.setOnItemClickListener((adapterView, view, i, l) -> {
@@ -86,7 +86,7 @@ public class GeneraliteFragment extends Fragment {
                     startActivity(new Intent(getContext(), OperationActivity.class));
                     break;
             }
-        });
+        }); */
 
         BtnDec.setOnClickListener(view -> {
 
@@ -126,7 +126,7 @@ public class GeneraliteFragment extends Fragment {
     }
 
     // Cette classe est utiliser pour pouvoir montrer l'appercu sur le listview
-    class MyAdapter extends ArrayAdapter{
+    /*class MyAdapter extends ArrayAdapter{
         String[] titleMaster;
         String[] titlePaie;
 
@@ -150,5 +150,5 @@ public class GeneraliteFragment extends Fragment {
 
             return row;
         }
-    }
+    } */
 }

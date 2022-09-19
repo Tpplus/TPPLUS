@@ -47,13 +47,25 @@
                         android:gravity="center"
                         android:layout_marginTop="5dp"/>
 
-  /*Ce ListView doit etre remplacer par RecyclerView puis que les donnees qu'il contiendra sera
-                    lu dans la base de donnee(firebase). Ce ListView c'est juste pour donner l'appercu.*/
 
-                    <ListView
-                        android:id="@+id/id_list_view"
+                    <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/info" />
+
+                    <TextView
+                        android:id="@+id/id_tit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:text="Désolé, vous n'avez aucune opération pour le moment."
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/gotic" />
 
                 </LinearLayout>
 
@@ -94,7 +106,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Nous contacter"
-                        android:textSize="15dp"
+                        android:textSize="20sp"
                         android:textStyle="bold|italic"
                         android:textColor="#040505"
                         android:layout_marginLeft="20dp"
@@ -105,7 +117,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Confidentialité"
-                        android:textSize="15dp"
+                        android:textSize="20sp"
                         android:textStyle="bold|italic"
                         android:textColor="#040505"
                         android:layout_marginLeft="20dp"
@@ -116,7 +128,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Partager"
-                        android:textSize="15dp"
+                        android:textSize="20sp"
                         android:textStyle="bold|italic"
                         android:textColor="#040505"
                         android:layout_marginLeft="20dp"
@@ -127,7 +139,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Aides"
-                        android:textSize="15dp"
+                        android:textSize="20sp"
                         android:textStyle="bold|italic"
                         android:textColor="#040505"
                         android:layout_marginLeft="20dp"
@@ -138,10 +150,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Mise à jour"
-                        android:textSize="15dp"
+                        android:textSize="20sp"
                         android:textStyle="bold|italic"
                         android:textColor="#040505"
                         android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="30dp"
                         android:layout_marginTop="10dp"/>
 
 
@@ -149,7 +162,7 @@
 
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
+          <!--  <androidx.cardview.widget.CardView
                 android:id="@+id/cv2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -195,23 +208,25 @@
 
                 </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView> -->
 
 
     <TextView
         android:id="@+id/btn_dec"
         android:padding="10dp"
-        android:layout_below="@id/cv2"
+        android:layout_below="@id/cv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="15dp"
+        android:textSize="18sp"
         android:layout_marginBottom="10dp"
         android:layout_marginRight="15dp"
         android:textColor="@color/white"
+        android:textStyle="bold"
        android:background="@drawable/btn_design2"
-        android:text="Deconnection"
+        android:text="Déconnection"
         android:gravity="center_horizontal" />
 
         </LinearLayout>

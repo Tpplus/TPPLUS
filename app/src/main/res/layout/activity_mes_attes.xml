@@ -25,11 +25,41 @@
         android:layout_marginTop="5dp"
         android:id="@+id/v"/>
 
-    <ListView
+    <LinearLayout
+        android:id="@+id/rl0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/info" />
+
+        <TextView
+            android:id="@+id/id_tit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:text="Désolé, vous n'avez aucune attestions pour le moment."
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/gotic" />
+
+
+    </LinearLayout>
+
+   <!-- <ListView
         android:id="@+id/lv2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/v"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp" /> -->
 
 </RelativeLayout>
