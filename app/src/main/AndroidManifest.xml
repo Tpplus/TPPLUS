@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tp">
+    package="com.xgenius.tp">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,46 +12,46 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tp">
         <activity
-            android:name=".Autres.AideActivity"
+            android:name="com.xgenius.tp.Autres.AideActivity"
             android:exported="false" />
         <activity
-            android:name=".Autres.NousContacterActivity"
+            android:name="com.xgenius.tp.Autres.NousContacterActivity"
             android:exported="false" />
         <activity
-            android:name=".MesDipActivity"
+            android:name="com.xgenius.tp.MesDipActivity"
             android:exported="false" />
         <activity
-            android:name=".MesAttesActivity"
+            android:name="com.xgenius.tp.MesAttesActivity"
             android:exported="false" />
         <activity
-            android:name=".MesDocActivity"
+            android:name="com.xgenius.tp.MesDocActivity"
             android:exported="false" />
         <activity
-            android:name=".OperationActivity"
+            android:name="com.xgenius.tp.OperationActivity"
             android:exported="false" />
         <activity
-            android:name=".Biblioteque_salle"
+            android:name="com.xgenius.tp.Biblioteque_salle"
             android:exported="false" />
         <activity
-            android:name=".Confirmation_activity"
+            android:name="com.xgenius.tp.Confirmation_activity"
             android:exported="false" />
         <activity
-            android:name=".Direct_salle"
+            android:name="com.xgenius.tp.Direct_salle"
             android:exported="false" />
         <activity
-            android:name=".Acces_salle"
+            android:name="com.xgenius.tp.Acces_salle"
             android:exported="false" />
         <activity
-            android:name=".Profil.PassOub"
+            android:name="com.xgenius.tp.Profil.PassOub"
             android:exported="true" />
         <activity
-            android:name=".InscrireActivity"
+            android:name="com.xgenius.tp.InscrireActivity"
             android:exported="false" />
         <activity
-            android:name=".Cours.CoursActivity"
+            android:name="com.xgenius.tp.Cours.CoursActivity"
             android:exported="true" />
         <activity
-            android:name=".AcceuilleActivity"
+            android:name="com.xgenius.tp.AcceuilleActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -60,13 +60,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.xgenius.tp.MainActivity"
             android:exported="true" />
-        <activity android:name=".Profil.ProfilModifie" />
-        <activity android:name=".Profil.ProfilActivityAff" />
-        <activity android:name=".Profil.ProfilActivity" />
-        <activity android:name=".ConnexionActivity" />
-        <activity android:name=".CreerCompteActivity" />
+        <activity android:name="com.xgenius.tp.Profil.ProfilModifie" />
+        <activity android:name="com.xgenius.tp.Profil.ProfilActivityAff" />
+        <activity android:name="com.xgenius.tp.Profil.ProfilActivity" />
+        <activity android:name="com.xgenius.tp.ConnexionActivity" />
+        <activity android:name="com.xgenius.tp.CreerCompteActivity" />
     </application>
 
 </manifest>
