@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.xgenius.tp.R;
 
@@ -29,6 +30,10 @@ public class MesDocActivity extends AppCompatActivity {
         AdapterList adapterList= new AdapterList(this, doc, type);
        // lv.setAdapter(adapterList);
 
+    }
+
+    public void AdDocs(View view) {
+        Toast.makeText(this, "Service indisponible!", Toast.LENGTH_SHORT).show();
     }
 
     private class AdapterList extends ArrayAdapter{

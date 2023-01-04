@@ -11,13 +11,14 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.xgenius.tp.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.xgenius.tp.Profil.PassOub;
 
 public class ConnexionActivity extends AppCompatActivity {
 
-    private EditText Email, Password;
+    private TextInputEditText Email, Password;
     private FirebaseAuth mAuth;
     private ProgressDialog loadingBar;
     private TextView CrBtn, passOublie;

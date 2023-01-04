@@ -10,10 +10,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.xgenius.tp.R;
 
 public class InscrireActivity extends AppCompatActivity {
-    private EditText nom,prenom,date,genre,pays;
+    private TextInputEditText nom,prenom,date,genre,pays;
     private Button abandon,continuer;
 
     @Override
@@ -34,6 +35,10 @@ public class InscrireActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Infos();
             }
+        });
+
+        abandon.setOnClickListener(v -> {
+
         });
     }
 

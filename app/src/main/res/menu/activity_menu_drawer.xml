@@ -7,7 +7,7 @@
             android:title="Profil"
             android:icon="@drawable/person"/>
 
-        <item
+       <!-- <item
             android:id="@+id/inscrip"
             android:title="Inscription"
             android:icon="@drawable/numero"
@@ -16,7 +16,7 @@
             android:id="@+id/paiem"
             android:title="Historique de paiement"
             android:icon="@drawable/paiment"
-            />
+            /> -->
 
         <item
             android:id="@+id/mes_doc"

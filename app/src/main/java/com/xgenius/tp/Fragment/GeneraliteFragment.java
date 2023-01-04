@@ -1,5 +1,6 @@
 package com.xgenius.tp.Fragment;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +11,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.xgenius.tp.R;
@@ -44,9 +44,9 @@ public class GeneraliteFragment extends Fragment {
         BtnDec= v.findViewById(R.id.btn_dec);
         dialog= new AlertDialog.Builder(getContext());
         //lv= v.findViewById(R.id.id_list_view);
-        contacterBtn= v.findViewById(R.id.nous_cont);
+       // contacterBtn= v.findViewById(R.id.nous_cont);
         partagerBtn= v.findViewById(R.id.id_part);
-        aideBtn= v.findViewById(R.id.id_aid);
+       // aideBtn= v.findViewById(R.id.id_aid);
 
         mAuth= FirebaseAuth.getInstance();
 
@@ -100,9 +100,13 @@ public class GeneraliteFragment extends Fragment {
 
         });
 
-        contacterBtn.setOnClickListener(view -> {
+       /* contacterBtn.setOnClickListener(view -> {
             startActivity(new Intent(getContext(), NousContacterActivity.class));
         });
+
+        aideBtn.setOnClickListener(view -> {
+            startActivity(new Intent(getContext(), AideActivity.class));
+        }); */
 
         partagerBtn.setOnClickListener(view -> {
             Intent intent= new Intent();
@@ -110,10 +114,6 @@ public class GeneraliteFragment extends Fragment {
             intent.putExtra(Intent.EXTRA_TEXT, "Salut je vous conseille d'utiliser BeCome");
             intent.setType("text/plain");
             startActivity(intent);
-        });
-
-        aideBtn.setOnClickListener(view -> {
-            startActivity(new Intent(getContext(), AideActivity.class));
         });
 
         return v;

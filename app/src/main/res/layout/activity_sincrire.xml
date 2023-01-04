@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#D3D1D1"
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".InscrireActivity">
@@ -11,12 +10,6 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-
 
     <LinearLayout
         android:orientation="vertical"
@@ -43,75 +36,105 @@
             android:textSize="18dp"
             android:layout_marginTop="5dp"/>
 
-        <EditText
-            android:id="@+id/nom"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Entree votre nom..."
-            android:inputType="textEmailAddress"
-            android:background="@drawable/design3"
-            android:textColor="@color/purple_200"
-            android:textSize="@dimen/editText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="50dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:padding="13dp"/>
+            android:hint="Nom"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
-        <EditText
-            android:id="@+id/prenom"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Entree votre prenom..."
-            android:inputType="textEmailAddress"
-            android:background="@drawable/design3"
-            android:textColor="@color/purple_200"
-            android:textSize="@dimen/editText"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:padding="13dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:hint="Prénom"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
-        <EditText
-            android:id="@+id/date"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/prenom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Entree la date de naissance..."
-            android:inputType="textEmailAddress"
-            android:background="@drawable/design3"
-            android:textColor="@color/purple_200"
-            android:textSize="@dimen/editText"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:padding="13dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:hint="Date de naissance"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
-        <EditText
-            android:id="@+id/genre"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Genre.."
-            android:inputType="textEmailAddress"
-            android:background="@drawable/design3"
-            android:textColor="@color/purple_200"
-            android:textSize="@dimen/editText"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:padding="13dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:hint="Genre"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
-        <EditText
-            android:id="@+id/pays"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             android:hint="Pays de residence"
-            android:inputType="textEmailAddress"
-            android:background="@drawable/design3"
-            android:textColor="@color/purple_200"
-            android:textSize="@dimen/editText"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:padding="13dp"/>
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
        <androidx.cardview.widget.CardView
            android:layout_marginRight="15dp"
@@ -132,6 +155,8 @@
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:fontFamily="sans-serif"
+                   android:layout_marginLeft="5dp"
+
                    android:textSize="20dp"
                    android:text="@string/condition"/>
 
@@ -146,12 +171,15 @@
             android:layout_marginTop="20dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
             android:layout_height="wrap_content">
             <Button
                 android:id="@+id/abandon"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp"
                 android:text="Abandon"
+                android:textAllCaps="false"
+                android:textSize="18sp"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -161,6 +189,8 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp"
                 android:text="Continuer"
+                android:textAllCaps="false"
+                android:textSize="18sp"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -169,7 +199,6 @@
 
     </LinearLayout>
 
-        </LinearLayout>
     </ScrollView>
 
 </LinearLayout>

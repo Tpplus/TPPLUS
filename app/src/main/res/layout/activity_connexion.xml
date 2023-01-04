@@ -4,99 +4,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/themebac"
+    android:background="#11000000"
     tools:context=".ConnexionActivity">
-
 
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_centerVertical="true"
-        app:cardCornerRadius="15dp"
-        android:visibility="gone"
-        >
+        android:layout_marginBottom="50dp"
+        android:elevation="25dp"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:hint="Email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Conn_Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="Mot de passe"
+                app:passwordToggleEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Conn_Password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:onClick="CliqueSurBtnConnexion"
+                android:text="Connexion" />
+
+            <TextView
+                android:id="@+id/forgetPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mot de passe oublié ?"
+                android:padding="13dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textAlignment="textEnd"
+                android:gravity="end" />
+
+            <TextView
+                android:id="@+id/join_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="13dp"
+                android:background="@drawable/design1"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:textAlignment="center"
+                android:text="Créer un compte"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
     </androidx.cardview.widget.CardView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:orientation="vertical">
-
-
-        <EditText
-            android:id="@+id/Conn_Email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email..."
-            android:inputType="textEmailAddress"
-            android:background="@drawable/design3"
-            android:textColor="@color/purple_200"
-            android:textSize="@dimen/editText"
-            android:layout_marginTop="50dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:padding="13dp"/>
-
-        <EditText
-            android:id="@+id/Conn_Password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="Password..."
-            android:background="@drawable/design3"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="15dp"
-            android:textColor="@color/purple_200"
-            android:textSize="@dimen/editText"
-            android:layout_marginLeft="15dp"
-            android:padding="13dp"/>
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:layout_marginRight="100dp"
-            android:layout_marginTop="10dp"
-            android:textAllCaps="false"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/purple_200"
-            android:onClick="CliqueSurBtnConnexion"
-            android:text="Connexion" />
-
-        <TextView
-            android:id="@+id/forgetPass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Mot de passe oublié ?"
-            android:padding="13dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:textSize="@dimen/editText"
-            android:textAlignment="textEnd"
-            android:gravity="end" />
-
-        <TextView
-            android:id="@+id/join_in"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:padding="13dp"
-            android:background="@drawable/design"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:textAlignment="center"
-            android:text="Créer un compte"
-            android:textSize="@dimen/editText"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:gravity="center_horizontal" />
-    </LinearLayout>
 
 </RelativeLayout>

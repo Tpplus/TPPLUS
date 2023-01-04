@@ -140,6 +140,8 @@
                         android:backgroundTint="@color/gray"
                         android:onClick="Sauvegarder"
                         android:text="Terminer"
+                        android:padding="10dp"
+                        android:textSize="18sp"
                         android:textAllCaps="false"
                         android:textColor="@color/white" />
 

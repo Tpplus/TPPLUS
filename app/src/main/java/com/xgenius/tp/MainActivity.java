@@ -124,12 +124,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         case R.id.profil:
             startActivity(new Intent(MainActivity.this, ProfilActivityAff.class));
             break;
-            case R.id.inscrip:
+            /*case R.id.inscrip:
                 Toast.makeText(MainActivity.this, "Inscription", Toast.LENGTH_SHORT).show();
             break;
             case R.id.paiem:
                 Toast.makeText(MainActivity.this, "Historique de paiement", Toast.LENGTH_SHORT).show();
-            break;
+            break; */
             case R.id.mes_doc:
                 startActivity(new Intent(this, MesDocActivity.class));
             break;

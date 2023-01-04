@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.xgenius.tp.R;
 import com.xgenius.tp.Profil.ProfilActivity;
 import com.google.firebase.auth.FirebaseAuth;
@@ -21,12 +22,12 @@ import java.util.HashMap;
 
 public class CreerCompteActivity extends AppCompatActivity {
 
-    private EditText Nom, Prenom, Pays, Email, Numero, Password,ConfirPass;
+    private TextInputEditText Nom, Prenom, Pays, Email, Numero, Password,ConfirPass;
     private ProgressDialog loadingBar;
     private DatabaseReference userRef;
     private FirebaseAuth mAuth;
 
-    private CountryCodePicker ccp;
+   // private CountryCodePicker ccp;
     private Button BtnConnexion;
 
     @Override
@@ -46,7 +47,7 @@ public class CreerCompteActivity extends AppCompatActivity {
         Password= findViewById(R.id.idPassword);
         ConfirPass= findViewById(R.id.idConfPassword);
         BtnConnexion= findViewById(R.id.ConnButton);
-        ccp= findViewById(R.id.idContryCode);
+       // ccp= findViewById(R.id.idContryCode);
 
         BtnConnexion.setOnClickListener(v -> {
             String nom= Nom.getText().toString();
@@ -59,54 +60,39 @@ public class CreerCompteActivity extends AppCompatActivity {
 
             if (TextUtils.isEmpty(nom)){
                 Nom.setError("Veuillez entrer votre nom");
-                Prenom.setError("");
-                Pays.setError("");
-                Email.setError("");
-                Numero.setError("");
-                Password.setError("");
-                ConfirPass.setError("");
+
             }else if (TextUtils.isEmpty(prenom)){
                 Prenom.setError("Veuillez entrer votre prénom");
-                Pays.setError("");
-                Email.setError("");
-                Numero.setError("");
-                Password.setError("");
-                ConfirPass.setError("");
+
             } else if (TextUtils.isEmpty(pays)) {
                 Pays.setError("Veuillez entrer le nom de votre pays");
-                Email.setError("");
-                Numero.setError("");
-                Password.setError("");
-                ConfirPass.setError("");
+
             }else if (TextUtils.isEmpty(email)) {
                 Email.setError("Veuillez entrer votre email");
-                Numero.setError("");
-                Password.setError("");
-                ConfirPass.setError("");
+
             }else if (TextUtils.isEmpty(numero)) {
                 Numero.setError("Veuillez entrer numéro de téléphone");
-                Password.setError("");
-                ConfirPass.setError("");
+
             }else if (TextUtils.isEmpty(password)) {
-                Password.setError("Veuillez entrer numéro de téléphone");
-                ConfirPass.setError("");
+                Password.setError("Veuillez entrer votre mot de passe");
+
             }else if (password.length()<6){
                 Password.setError("Votre mot de passe doit comporter plus de 6 caractères");
             } else if (TextUtils.isEmpty(confPass)) {
-                ConfirPass.setError("Veuillez entrer numéro de téléphone");
+                ConfirPass.setError("Veuillez confirmer votre mot de passe");
             }else if (!confPass.equals(password)){
                 ConfirPass.setError("Votre mot de passe ne correspond pas");
-                Password.setError("");
+
             }else {
                 loadingBar.setTitle("Création du compte en cours...");
                 loadingBar.setMessage("Veuillez patientez");
                 loadingBar.setCanceledOnTouchOutside(false);
                 loadingBar.show();
 
-               ccp.registerCarrierNumberEditText(Numero);
-                numero= ccp.getFullNumberWithPlus();
+              // ccp.registerCarrierNumberEditText(Numero);
+               // numero= ccp.getFullNumberWithPlus();
 
-                String finalNumero = numero;
+               // String finalNumero = numero;
                 String nom_prenom= ""+nom+" "+prenom;
 
                 mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
@@ -118,7 +104,7 @@ public class CreerCompteActivity extends AppCompatActivity {
                 userMap.put("Nom Prénom", nom_prenom);
                 userMap.put("Pays", pays);
                 userMap.put("Email", email);
-                userMap.put("Numero", finalNumero);
+                userMap.put("Numero", numero);
                 userMap.put("Mot de passe", password);
 
                 userRef.child(userId).updateChildren(userMap).addOnCompleteListener(task1 -> {

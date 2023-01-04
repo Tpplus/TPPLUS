@@ -11,12 +11,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.xgenius.tp.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class PassOub extends AppCompatActivity {
 
-    private EditText email;
+    private TextInputEditText email;
     private Button btn;
     private FirebaseAuth mAuth;
     private ProgressDialog loadingBar;

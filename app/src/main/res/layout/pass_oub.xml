@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Profil.PassOub"
-    android:background="@drawable/themebac"
     >
 
     <TextView
         android:id="@+id/idtv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/idpf_Email"
+        android:layout_above="@+id/til"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="#40FFFFFF"
@@ -26,20 +25,29 @@ votre boite email"
         android:visibility="gone"
         />
 
-    <EditText
-        android:id="@+id/idpf_Email"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/design3"
-        android:hint="Email..."
-        android:inputType="textEmailAddress"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:hint="Email"
         android:layout_centerVertical="true"
-        android:padding="13dp"
-        android:textColor="@color/purple_200"
-        android:textSize="@dimen/editText" />
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idpf_Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
     <Button
         android:id="@+id/idbtnpf"
@@ -48,10 +56,12 @@ votre boite email"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="100dp"
-        android:backgroundTint="@color/white"
-        android:layout_below="@+id/idpf_Email"
+        android:layout_below="@+id/til"
         android:text="Envoyer l'email"
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
         android:textAllCaps="false"
-        android:textColor="@color/purple_200" />
+        android:textColor="@color/white" />
 
 </RelativeLayout>
